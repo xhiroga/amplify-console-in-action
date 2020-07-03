@@ -13,4 +13,6 @@ docker-compose run --rm review && open amplify-console-in-action.pdf
 
 ##　 References
 
+## Special Thanks
+
 https://kauplan.org/reviewstarter/
