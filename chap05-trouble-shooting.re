@@ -9,7 +9,7 @@
  * 前のやつが消えてないとか
  * CloudFrontからの移行時とか
 
-=== webhookゴミ掃除（AmplifyAppを大量に作ったケース）
+=== webhookのゴミ掃除
  * Github上だとどれが生きてるAppかわからないんだよな...
 
 @<b>{要リサーチ}  

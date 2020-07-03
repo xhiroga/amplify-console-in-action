@@ -2,10 +2,8 @@
 
 //abstract{
 AWS CLI, Amplify-CLI, CFn, CDKについて
-（他にあるっけ？TerraformやPulumiはともかく）
 //}
 
- * それぞれ向いてる用途があるので言及する
 
 == AWS CLI
  * まずAmplify CLIと違うことに釘を差す
@@ -23,7 +21,3 @@ AWS CLI, Amplify-CLI, CFn, CDKについて
 
 == CDK
  * だいたいCFnと同じだが、現在アルファリリース
-
-@<b>{要リサーチ}
-
- * CDKのリリーススケジュールどこウォッチすればいいのか
