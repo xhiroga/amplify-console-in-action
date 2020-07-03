@@ -5,6 +5,7 @@
 
  * CloudFront + S3と機能面での比較
  * amplify.com の適当なドメインで作れること、Previewあること、アクセスコントロール
+ * GitLfsやPrivate SubModuleの非対応
  * (e2eテスト利用したことない。記載すべきか？)
 
 
