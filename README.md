@@ -1,6 +1,16 @@
-# README
+# AWS Amplify Console 実践入門
 
-これは Re:VIEW Starter で生成された、Re:VIEW 用プロジェクトです。
+PDF is here.  
+https://hiroga-cognito-user-migration.s3-ap-northeast-1.amazonaws.com/amplify-console-in-action.pdf
 
-* 対象とする Re:VIEW バージョン： 2.5 (これ以外のバージョンだと動作未確認)
-* 問い合わせ： Twitter でハッシュタグ「#reviewstarter」つきでツイートしてください。
+## Run
+
+build at local
+
+```sh
+docker-compose run --rm review && open amplify-console-in-action.pdf
+```
+
+##　 References
+
+https://kauplan.org/reviewstarter/
