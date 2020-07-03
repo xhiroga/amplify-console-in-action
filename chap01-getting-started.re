@@ -1,7 +1,6 @@
 = 入門Amplify Console
 
 //abstract{
-TODO
 //}
 
  * Amplify Consoleとはなにか、NetlifyとかGCP/Azureの対応サービスにも触れながら書く

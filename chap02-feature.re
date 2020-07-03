@@ -1,7 +1,6 @@
 = Amplify Consoleの機能
 
 //abstract{
-TODO
 //}
 
  * CloudFront + S3と機能面での比較
