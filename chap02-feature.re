@@ -1,4 +1,4 @@
-= Amplify Consoleの機能
+= Amplify Consoleの特徴
 
 //abstract{
 //}
@@ -8,6 +8,9 @@
  ** GitLfsやPrivate SubModuleの非対応
  ** (e2eテスト利用したことない。記載すべきか？)
 
+ * CIとの比較
+ ** カバレッジがない
+ ** 結果の通知が弱い
 
  * CloudFront, ALBとの非機能面の比較
  ** セキュリティできること、できないこと

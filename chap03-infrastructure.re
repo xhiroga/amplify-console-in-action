@@ -1,4 +1,4 @@
-= Amplify Consoleのインフラ
+= Amplify Consoleを支援するツール
 
 //abstract{
 AWS CLI, Amplify-CLI, CFn, CDKについて
