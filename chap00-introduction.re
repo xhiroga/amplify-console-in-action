@@ -20,10 +20,13 @@ Webアプリケーションのフロントエンドの継続的な開発には�
 
 =={sec-ext} 本書で扱わないこと
 
+ * Amplify Consoleの基本的な仕様@<fn>{a72f2df2-5366-4ca7-9826-1cfda7a69c25}
+ * サンプルアプリケーションやチュートリアル
  * Amplify CLI
  * Amplify Framework
  * カスタムバックエンド
- * サンプルアプリケーションやチュートリアル（インターネットにたくさんあります）
+
+//footnote[a72f2df2-5366-4ca7-9826-1cfda7a69c25][AWSの公式ドキュメントをご覧ください。]
 
 =={sec-ext} 本書の構成
 
@@ -39,4 +42,3 @@ Webアプリケーションのフロントエンドの継続的な開発には�
 
  * Mail: hiroga1030@gmail.com
  * Twitter: @hiroga_cc
-
