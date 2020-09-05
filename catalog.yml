@@ -4,6 +4,7 @@ PREDEF:
 CHAPS:
   - chap01-getting-started.re
   - chap02-feature.re
+  - chap80-column-category.re
   - chap03-infrastructure.re
   - chap04-amplify-console-in-action.re
   - chap05-trouble-shooting.re
