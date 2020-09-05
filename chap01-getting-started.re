@@ -4,7 +4,7 @@
 //}
 
  * Amplify Consoleとは
- ** NetlifyとかGCP, Azureの対応サービスにも触れる
+ ** NetlifyとかGCP, Azureの対応サービスにも触れる vercel
  * CI + CloudFront + S3との相違点についても書く
  ** 職人技不要
  ** CloudFrontは構築完了まで25分くらいかかる
