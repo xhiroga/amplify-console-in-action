@@ -1,23 +1,57 @@
 = Amplify Consoleを支援するツール
 
 //abstract{
-AWS CLI, Amplify-CLI, CFn, CDKについて
+AWSのコンソール以外でAmplify Consoleを構築・運用するためのツールをご紹介します。
+具体的には、AWS CLI, Amplify CLI, CFn, CDK, Terraformを取り上げます。
 //}
 
 
 == AWS CLI
- * まずAmplify CLIと違うことに釘を差す
- * AppやらBranchやらリソースが細かいので作成には向いてない。参照系とか、ログ取りとか...（実際のところAmplifyのログが必要になった試しがないので説得力がない）
- * ちなみにログの取得は現時点でAWS SDKにはなくCLIにしかない。
 
-== Amplify-CLI
- * ぶっちゃけ初心者向けのテンプレ作成機能以上の意味はないと思っているが...
+Amplify ConsoleにもAWS CLIがあります。念のために付け加えると、Amplify-CLIとは別のCLIです。
+他のサービスのAWS CLIにもいえることですが、CloudFormationやCDKの構成のためにコンソールで作成したリソースの情報をJSON化するために役立ちます。
 
-== CFn
- * GithubのPATをいい感じに用いる（Parameter StoreかSecretにつっこもう）
- * たいていAmplify App自体を更新することはないのでCLIで十分だ。
- * カスタムDockerイメージの設定の仕方に癖がある（これドキュメントに書いてるのか？）
- * Amplify Console App以外に、Amplicyの通知の設定を手でやるのがしんどいのでCFnおすすめ
+コマンドの例
 
-== CDK
- * だいたいCFnと同じだが、現在アルファリリース
+```
+$ aws amplify list-apps
+
+{
+    "apps": [
+        {
+            "appId": "d1234cce567j4q",
+            "appArn": "arn:aws:amplify:ap-northeast-1:************:apps/d1234cce567j4q",
+            .....
+        }
+    ]
+}
+```
+
+
+== Amplify CLI
+Amplify CLIでもAmplify Consoleのアプリケーションを構築することができます。
+AWSに不慣れな方などは、必要なリソースをまとめて構築してくれるのが嬉しいかもしれません。とはいえ、個人的にはAmplify ConsoleのセットアップはAWSのコンソールから行うのが最も簡単だと思います。
+
+コマンドの例
+
+```
+$ amplify console
+https://console.aws.amazon.com/amplify/home#/*************/**********/dev
+```
+
+== CloudFormation & CDK
+
+Amplify Consoleの設定をAWSのコンソール以外から行う場合に、最もおすすめできる構成管理ツールです。
+主な理由は2つあり、
+ * バックエンドとの整合性を考慮すると、dev, prodなど環境ごとにAmplify ConsoleのAppを作成するのがベストであるため。
+ * Slack通知のために、Amplify Console Appと同時にEventBridgeのRuleを作成したいため。
+
+ただし、GitHubなどGitプロバイダーのトークンをどのように管理するかは悩ましいところです。
+筆者のチームでは、SecretManagerにGitHubのPersonal Access Tokenを保存することで対応しています。
+
+== Terraform
+
+2020年9月時点で開発中です。@<fn>{e65ebf21-f2ae-4432-82a0-57ea74b669d6}
+必要な方はUp Voteすると良いかもしれませんね。
+//footnote[e65ebf21-f2ae-4432-82a0-57ea74b669d6][AWS Amplify Console Resources #6917(https://github.com/terraform-providers/terraform-provider-aws/issues/6917)]
+
