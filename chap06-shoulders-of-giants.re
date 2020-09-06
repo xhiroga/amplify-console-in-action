@@ -13,3 +13,14 @@ Amplify Consoleの開発者向けドキュメントです。@<br>{}
 @<href>{https://speakerdeck.com/potato4d/amplify-console-dan-sheng-yi-lai-ben-fan-yun-yong-situduketewakatutakoto-number-awswakaran-tokyo, Amplify Console 誕生以来本番運用しつづけてわかったこと #awswakaran_tokyo}@<br>{}
 2018年のリリース以来Amplify Consoleを本場運用している方の知見がまとまったスライドです。NetlifyやFirebase Hostingとの比較もあります。@<br>{}
 
+
+https://dev.to/aws/12-new-features-of-aws-amplify-4i8h
+https://qiita.com/ozaki25/items/cf7a0d9cc346e55469bc
+
+
+https://qiita.com/tags/amplify
+
+https://dev.to/t/awsamplify
+
+
+https://speakerdeck.com/youta1119/amplify-console-falsebirudotong-zhi-woslackdeshou-kequ-rutameniyatutakoto

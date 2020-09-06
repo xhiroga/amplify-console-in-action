@@ -41,5 +41,21 @@
  * CFn使ってAmplifyAppを環境ごとに建てるのが正解
  * Preview用Appはdevとアプリ分けるのが正解
 
+* CloudFront + S3, CloudFront + Amplifyと機能面の比較
+ ** amplify.com の適当なドメインで作れること、Previewあること、アクセスコントロール
+ ** GitLfsやPrivate SubModuleの非対応
+ ** e2eテスト
+
+ * CIとの比較
+ ** カバレッジがない
+ ** 結果の通知が弱い
+
+ * CloudFront, ALB, CloudFront + Amplifyとの非機能面の比較
+ ** セキュリティできること、できないこと
+ *** IAM制限
+ *** パスワードはできるがIP制限は無理,,,）
+ ** 実運用したコスト感とか
+
+
 == ちょっとしたアイデア: メンテナンス中の画面をカスタムドメインとブランチの切り替えで実現する
  * メンテナンス中です、だけ表示するブランチを作ろう的な

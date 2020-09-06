@@ -6,7 +6,7 @@ NetlifyやVercel、Firebase Hostingらと同様に、GitHubリポジトリとの
 それらのサービスとの対比に加え、AWSのサービスの中でどう位置づけられるかも合わせて見ていきましょう。
 //}
 
- =={sec-ext} Amplify Consoleとは
+=={sec-ext} Amplify Consoleとは
 AWSの静的Webホスティングサービスです。AWSコンソール上でWebアプリケーションのGitHubリポジトリとブランチを指定することで、コミットごとにWebアプリケーションを最新化してくれます。
 また、PullRequestに対応して一時的なURLにWebアプリをデプロイしたり、E2Eテストを実行することもできます。
 
