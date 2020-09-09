@@ -1,39 +1,34 @@
 = はじめに
 
-Webアプリケーションのフロントエンドの継続的な開発にはベストプラクティスがあります。GitをトリガーにCI/CDが動作すること。PullRequestに対して、プレビュー用のURLを発行すること。その過程をチャットで通知すること。
-
-一昔前ならS3 + CloudFront + CIなどを組み合わせて独自のパイプライン構築が必要でした。しかしいまや、CI/CD同梱のサーバレスなWebアプリケーションホスティングサービスには多数の選択肢があります。
-それらの選択肢のうち、AWSが提供するのがAWS Amplify Consoleです。AWSの様々なサービスとの一元的な管理や、Route53とのシームレスな連携が強みと言えるでしょう。
-その一方で初心者には分かりづらい点も多く、特にその他のAmplifyファミリーと混同することは容易に想像できます（なお予めお断りしておきますが、この本はAmplify Consoleだけを対象にしています）
-
-筆者は2019年にAmplify Consoleに初めて触り、それから約半年のうちに3つ以上のAWSアカウントで合計20以上のWebアプリケーションをセットアップしてきました。少人数のチームで大量のアプリケーションを管理するために、様々な工夫をしています。
-そのためにAmplify Consoleの機能を活用し、またAWSならではの強力な構成管理ツール（CloudFormationとCDK）を活用して社内の複数のWebアプリケーションのデプロイを一元管理しています。
-
-本書では、そうした経験から得られたAmplify Consoleを扱う上でのテクニックを公開します。これからAmplify Consoleに触る方が、本書を参考に1日でも早く理想のCI/CDパイプラインを構築できれば幸いです。
+本書を手にとっていただきありがとうございます。Amplify Consoleを利用してWebサイト・Webアプリケーションのホスティングを検討している方や、すでに活用されている方に対して、Amplify Consoleを現場で運用して得られた知見を共有したいと考えて本書を執筆いたしました。
+@<br>{}
+Amplify Consoleを使えば、フロントエンド開発のベストプラクティスを手軽に導入できます。Amplify Consoleの登場以前は、AWSであればS3、CloudFront、CodeBuildなどのCIサービスを組み合わせて自前でCI/CDパイプラインを用意する必要がありました。
+Amplify Consoleの登場によって、それらの作業は不要になりました。また、Pull Requestの作成に応じたPreview用のWebサイトのデプロイなどの機能も提供されています。
+@<br>{}
+便利な一方で、Amplify Consoleは登場してから日の浅いサービスでもあります。通知やビルドの設定で悩まされることは誰もが通る道です。また、Amplifyファミリー、特にAmplify CLIと混同することで、検索がしづらくなっている面も否めません。本書がそうした状況で、少しでもAmplify Consoleを実践するための助けになれば幸いです。
+@<br>{}
+筆者は2019年に業務でAmplify Consoleを導入して以来、それから半年のうちに3つ以上のAWSアカウントで合計20以上のWebアプリケーションをセットアップしてきました。
+少人数のチームで多くのアプリケーションを管理するために、Amplify Consoleの機能の活用、CloudFormationおよびAWS CDKを使った一括管理、様々なトラブルシューティングを行ってきました。
+@<br>{}
+本書では、そうした経験から得られたAmplify Consoleを扱う上での知見を共有します。これからAmplify Consoleに触る方も、現在Amplify Consoleを導入されている方も、Amplify Consoleを実践する上で何らかの発見があれば幸いです。
 
 =={sec-ext} 本書で扱うこと
 
-* Amplify Consoleの基本的な機能
-* Amplify Consoleとそれ以外のAWSサービスとの関係
-* Amplify Consoleを現場で活用するためのテクニック
-* Amplify Consoleに関するトラブルシューティング
+ * Amplify Consoleの基本的な機能
+ * Amplify Consoleを実践するための知見
+ * Amplify Consoleに関するトラブルシューティング
 
 =={sec-ext} 本書で扱わないこと
 
- * Amplify Consoleの基本的な仕様@<fn>{a72f2df2-5366-4ca7-9826-1cfda7a69c25}
- * サンプルアプリケーションやチュートリアル
- * Amplify CLI
- * Amplify Framework
- * カスタムバックエンド
-
-//footnote[a72f2df2-5366-4ca7-9826-1cfda7a69c25][AWSの公式ドキュメントをご覧ください。]
+ * Amplify Consoleによるチュートリアル
+ * Amplify Framework（Amplify CLIなど）を利用した開発
 
 =={sec-ext} 本書の構成
 
-初めに第一章で、Amplify Consoleについての基本的な紹介を行います。NetlifyなどAmplify Console以外の選択肢の紹介や、Amplify CLIなどのAmplifyファミリーの紹介もここでします。
-次に第二章では、それまでのAWSのサービスにおけるフロントエンドCI／CDパイプライン構築とAmplify Consoleを比較します。
-続く第三章でAmplify Consoleの構成管理について、第4章ではカスタムビルドやSlack通知の構築などの発展的なトピックを扱います。
-最後の第五章では、筆者のチームが実際に遭遇したトラブルと、その対応をまとめました。読者の方のご参考になれば幸いです。
+基本的な機能を紹介する前半と、実践した上での知見をご紹介する後半に分かれています。
+@<br>{}
+前半の第1章では静的WebホスティングとAmplify Consoleについて、第2章ではAmplify Consoleの基本的な機能についてご紹介します。
+後半の第3章ではAmplify ConsoleとCloudFormation・AWS CDKについて、第4章では実践する上でのテクニックをご紹介します。また、第5章では筆者が対応したトラブルシューティングを簡単にご紹介します。
 
 =={sec-ext} 意見と質問
 
