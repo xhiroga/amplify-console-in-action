@@ -40,49 +40,48 @@ Amplify Console -> EventBridge -> SNS
 EventBridgeのRuleが定まれば、後はLambdaを定義するだけです。
 参考までに、以下のようなイベントが流れてきます。
 
-ビルド成功時
-```
-{
-    "version": "0",
-    "id": "3b0a98b1-2e98-5af5-f0c6-1510101e8362",
-    "detail-type": "Amplify Deployment Status Change",
-    "source": "aws.amplify",
-    "account": "************",
-    "time": "2020-09-07T23:51:03Z",
-    "region": "ap-northeast-1",
-    "resources": [
-        "arn:aws:amplify:ap-northeast-1:************:apps/abcde12345678/branches/master/jobs/0000000004"
-    ],
-    "detail": {
-        "appId": "abcde12345678",
-        "branchName": "master",
-        "jobId": "4",
-        "jobStatus": "SUCCEED"
-    }
-}
-```
 
-ビルド失敗時
-```
+//emlist[Lambdaが受け取るEvent(ビルド成功時)]{
 {
-    "version": "0",
-    "id": "e335584f-e9d8-ff33-e100-19cbb1c4c569",
-    "detail-type": "Amplify Deployment Status Change",
-    "source": "aws.amplify",
-    "account": "************",
-    "time": "2020-09-07T23:44:38Z",
-    "region": "ap-northeast-1",
-    "resources": [
-        "arn:aws:amplify:ap-northeast-1:************:apps/abcde12345678/branches/master/jobs/0000000003"
-    ],
-    "detail": {
-        "appId": "abcde12345678",
-        "branchName": "master",
-        "jobId": "3",
-        "jobStatus": "FAILED"
-    }
+  "version": "0",
+  "id": "3b0a98b1-2e98-5af5-f0c6-1510101e8362",
+  "detail-type": "Amplify Deployment Status Change",
+  "source": "aws.amplify",
+  "account": "************",
+  "time": "2020-09-07T23:51:03Z",
+  "region": "ap-northeast-1",
+  "resources": [
+    "arn:aws:amplify:ap-northeast-1:************:apps/abcde12345678/branches/master/jobs/0000000004"
+  ],
+  "detail": {
+    "appId": "abcde12345678",
+    "branchName": "master",
+    "jobId": "4",
+    "jobStatus": "SUCCEED"
+  }
 }
-```
+//}
+
+//emlist[Lambdaが受け取るEvent(ビルド失敗時)]{
+{
+  "version": "0",
+  "id": "e335584f-e9d8-ff33-e100-19cbb1c4c569",
+  "detail-type": "Amplify Deployment Status Change",
+  "source": "aws.amplify",
+  "account": "************",
+  "time": "2020-09-07T23:44:38Z",
+  "region": "ap-northeast-1",
+  "resources": [
+    "arn:aws:amplify:ap-northeast-1:************:apps/abcde12345678/branches/master/jobs/0000000003"
+  ],
+  "detail": {
+    "appId": "abcde12345678",
+    "branchName": "master",
+    "jobId": "3",
+    "jobStatus": "FAILED"
+  }
+}
+//}
 
 
 TODO: 画像を追加
@@ -106,17 +105,17 @@ Amplify Consoleを複数のAWSアカウントで利用していると、共通�
 
 コード例
 
-```
+//emlist[amplify.yml の例]{
   phases:
-    preBuild:
-      commands:
-        - credentials=$(aws sts assume-role --role-arn ${ASSUME_ROLE_ARN} --role-session-name "RoleSessionFromMyAwesomeAmplify" | jq .Credentials)
-        - export AWS_ACCESS_KEY_ID=$(echo ${credentials} | jq -r .AccessKeyId)
-        - export AWS_SECRET_ACCESS_KEY=$(echo ${credentials} | jq -r .SecretAccessKey)
-        - export AWS_SESSION_TOKEN=$(echo ${credentials} | jq -r .SessionToken)
-        # add rsa private key for pulling submodule
-        - aws secretsmanager get-secret-value --secret-id "github-deploy-key" --output text --query "SecretString" > ~/.ssh/id_rsa_deploy_key
-```
+  preBuild:
+    commands:
+    - credentials=$(aws sts assume-role --role-arn ${ASSUME_ROLE_ARN} --role-session-name "RoleSessionFromMyAwesomeAmplify" | jq .Credentials)
+    - export AWS_ACCESS_KEY_ID=$(echo ${credentials} | jq -r .AccessKeyId)
+    - export AWS_SECRET_ACCESS_KEY=$(echo ${credentials} | jq -r .SecretAccessKey)
+    - export AWS_SESSION_TOKEN=$(echo ${credentials} | jq -r .SessionToken)
+    # add rsa private key for pulling submodule
+    - aws secretsmanager get-secret-value --secret-id "github-deploy-key" --output text --query "SecretString" > ~/.ssh/id_rsa_deploy_key
+//}
 
 
 

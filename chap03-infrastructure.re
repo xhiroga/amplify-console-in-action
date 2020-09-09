@@ -13,31 +13,36 @@ Amplify ConsoleにもAWS CLIがあります。念のために付け加えると�
 
 コマンドの例
 
-```
-$ aws amplify list-apps
+//emlist[AWS CLI コマンドの例]{
+# terminal
 
+$ aws amplify list-apps
 {
-    "apps": [
-        {
-            "appId": "d1234cce567j4q",
-            "appArn": "arn:aws:amplify:ap-northeast-1:************:apps/d1234cce567j4q",
-            .....
-        }
-    ]
+  "apps": [
+    {
+      "appId": "d1234cce567j4q",
+      "appArn": "arn:aws:amplify:ap-northeast-1:************:apps/d1234cce567j4q",
+      .....
+    }
+  ]
 }
-```
+//}
 
 
 == Amplify CLI
 Amplify CLIでもAmplify Consoleのアプリケーションを構築することができます。
 AWSに不慣れな方などは、必要なリソースをまとめて構築してくれるのが嬉しいかもしれません。とはいえ、個人的にはAmplify ConsoleのセットアップはAWSのコンソールから行うのが最も簡単だと思います。
 
-コマンドの例
+//emlist[Amplify CLI コマンドの例]{
+# terminal
 
-```
+$ cd my-awesome-amplify-app
 $ amplify console
-https://console.aws.amazon.com/amplify/home#/*************/**********/dev
-```
+
+# マネジメントコンソールで my-awesome-amplify-app を参照するURL
+https://console.aws.amazon.com/amplify/home#/*************/**********/dev 
+//}
+
 
 == CloudFormation & CDK
 
