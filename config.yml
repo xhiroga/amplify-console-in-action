@@ -195,7 +195,7 @@ titlepage: true
 # ディレクトリに置かなければならず、カレントディレクトリには一切置いては
 # ならない。
 # contentdir: null
-# contentdir: contents
+contentdir: contents
 
 # 1ページの行数文字数と1kbごとのページ数を用紙サイズで指定する(A5 or B5)。
 # page_metric: A5
