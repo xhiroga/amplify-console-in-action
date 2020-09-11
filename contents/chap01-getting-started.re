@@ -7,7 +7,7 @@ NetlifyやVercel、Firebase Hostingらと同様に、GitHub等と連携したCI/
 それらのサービスとの対比に加え、AWSのサービスの中でどう位置づけられるかも合わせて見ていきましょう。
 //}
 
-=={sec-ext} Amplify Console
+== Amplify Console
 
 === 静的Webホスティングサービス
 本書における静的Webホスティングサービスとは、Gitリポジトリと連携したCI/CDパイプラインを備え、SPAや静的サイトをデプロイできるサービスをいいます。
@@ -39,7 +39,7 @@ TODO: 内部的にS3+CloudFront＋CodeBuild、スクショ
 //footnote[f9c89212-b773-4141-8af7-e644d93cca79][Document History for AWS Amplify(https://docs.aws.amazon.com/amplify/latest/userguide/document-history.html)]
 //footnote[7c571916-3b38-4e1b-96bd-cf57f51dd4a1][2020年4月にZEITから改称]
 
-=={sec-ext} AmplifyファミリーとAmplify Console
+== AmplifyファミリーとAmplify Console
 
 AWS Amplifyは、AWSがフロントエンド向けに提供するサービスを総称するブランド名です。Amplify Consoleは、そのうち静的サイトホスティングを担うサービスに過ぎません。
 まずは、AWS Amplifyブランドで提供されるサービスを概観します。
