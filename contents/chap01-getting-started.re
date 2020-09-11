@@ -3,7 +3,7 @@
 //abstract{
 Amplify Consoleは、AWSの静的Webホスティングサービスです。
 NetlifyやVercel、Firebase Hostingらと同様に、GitHub等と連携したCI/CDパイプライン・ホスティング・CDNを備えるサービスです。
-@<br>{}
+//blankline
 それらのサービスとの対比に加え、AWSのサービスの中でどう位置づけられるかも合わせて見ていきましょう。
 //}
 
@@ -11,9 +11,9 @@ NetlifyやVercel、Firebase Hostingらと同様に、GitHub等と連携したCI/
 
 === 静的Webホスティングサービス
 本書における静的Webホスティングサービスとは、Gitリポジトリと連携したCI/CDパイプラインを備え、SPAや静的サイトをデプロイできるサービスをいいます。
-@<br>{}
+//blankline
 2015年4月に、MakerLoop, Inc.（現: Netlify, Inc.）からNetlifyがリリースされました。@<fn>{de6c201c-3107-451b-9717-6b574ec64a8f}
-@<br>{}
+//blankline
 日本では2016年から徐々に利用されているようです。例えば、QiitaのNetlifyに関する一番古い記事は2016年8月18日に投稿されています。@<fn>{93dcd09b-99af-48ab-8a45-49ff46fdfd1b}
 S3+CloudFrontによる静的WebホスティングはAWSに慣れている人でも面倒なことから、AWSメインの開発者でもNetlifyのシンプルさを好む方もいたようです。@<fn>{91abfa0f-02ca-4b15-bc37-c1e37059ac28}
 

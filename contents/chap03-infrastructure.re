@@ -13,8 +13,7 @@ Amplify ConsoleにもAWS CLIがあります。念のために付け加えると�
 
 コマンドの例
 
-//emlist[AWS CLI コマンドの例]{
-# terminal
+//terminal[AWS CLI コマンドの例]{
 
 $ aws amplify list-apps
 {
@@ -33,7 +32,7 @@ $ aws amplify list-apps
 Amplify CLIでもAmplify Consoleのアプリケーションを構築することができます。
 AWSに不慣れな方などは、必要なリソースをまとめて構築してくれるのが嬉しいかもしれません。とはいえ、個人的にはAmplify ConsoleのセットアップはAWSのコンソールから行うのが最も簡単だと思います。
 
-//emlist[Amplify CLI コマンドの例]{
+//terminal[Amplify CLI コマンドの例]{
 # terminal
 
 $ cd my-awesome-amplify-app

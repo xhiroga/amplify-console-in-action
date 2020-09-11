@@ -41,7 +41,7 @@ EventBridgeのRuleが定まれば、後はLambdaを定義するだけです。
 参考までに、以下のようなイベントが流れてきます。
 
 
-//emlist[Lambdaが受け取るEvent(ビルド成功時)]{
+//terminal[Lambdaが受け取るEvent(ビルド成功時)]{
 {
   "version": "0",
   "id": "3b0a98b1-2e98-5af5-f0c6-1510101e8362",
@@ -62,7 +62,7 @@ EventBridgeのRuleが定まれば、後はLambdaを定義するだけです。
 }
 //}
 
-//emlist[Lambdaが受け取るEvent(ビルド失敗時)]{
+//terminal[Lambdaが受け取るEvent(ビルド失敗時)]{
 {
   "version": "0",
   "id": "e335584f-e9d8-ff33-e100-19cbb1c4c569",
@@ -105,7 +105,7 @@ Amplify Consoleを複数のAWSアカウントで利用していると、共通�
 
 コード例
 
-//emlist[amplify.yml の例]{
+//terminal[amplify.yml の例]{
   phases:
   preBuild:
     commands:
