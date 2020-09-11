@@ -67,10 +67,12 @@ AWSのコンソールからメール通知を設定できます。
 なお、Route53の自動設定を行うには、Amplify Console アプリケーションと指定したドメイン名を登録しているHostedZoneが同じAWSアカウントに存在する必要があります。
 外部のドメイン管理サービスや別のAWSアカウントのRoute53で管理している場合は、別途手動で設定が必要です。
 
-== Amplify vs CloudFront+S3の機能比較
+== Amplify Console vs CloudFront+S3の機能比較
+
+Amplify Console のパフォーマンスは、CloudFront + S3 と同レベルです。しかし、機能の違いがあります。
+Amplify Consoleの優位点は、コミットごとの即時キャッシュ無効化・ブランチごとの自動デプロイ・Pull Request のWeb Preview 作成、パスワード保護などがマネージドサービスとして提供されていることです。
+一方で、CloudFrontでは可能だったLambda@Edgeの利用は現在サポートされていません。したがって、IPアドレスによるアクセス制限・サーバーサイドレンダリングなどを実装することができません。
+また、コスト面
 
 Amplifyの優位点の一つに、特にドメインの設定をしていなくても amplify.com のドメインでWebサイトの公開ができる点が挙げられます。
 一方で、CloudFront+S3の優位点はACLの設定とLambda@Edgeの利用です。これがあることで、CloudFront+S3の構成ではIPアドレスによるアクセス制限や、Lambda@EdgeによるSSRなどが実現できます。
-ただし、当然ながらコスト面ではAmplify > CloudFront+S3になっています。
-
-TODO: 手軽さ、キャッシュのInvalidate、デルタデプロイも
