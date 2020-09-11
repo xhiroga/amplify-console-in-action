@@ -6,4 +6,5 @@
 tmp/*
 amplify-console-in-action-pdf/*
 *.pdf
+!cover.pdf
 .local
