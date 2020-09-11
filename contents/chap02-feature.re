@@ -15,9 +15,9 @@ GitHubなどのGitプロバイダーと組み合わせて利用するAmplify Con
  * ビルド成果物を保存しているストレージの直接指定(Manual Deploy)
  * Incoming WebHookによるビルド実行
 
-=== Pull RequestのWeb Previewについて
+=== Pull Request の Web Previewについて
 
-GitHub等のPull Requestごとにビルドを行い、一時的なURLに成果物をデプロイしてWebで確認できる機能です。
+GitHub 等の Pull Request ごとにビルドを行い、一時的なURLに成果物をデプロイしてWebで確認できる機能です。
 
 GitHubでPull Requestに対するWeb Previewを有効にするには、対象のリポジトリに対してアクセス権のあるGitHubユーザーがAmplify Consoleに対して権限を付与する必要があります。
 チームで運用する場合は、GitHub側にシステムユーザーを作成して権限を付与するのがよいでしょう。
