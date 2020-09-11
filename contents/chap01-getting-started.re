@@ -19,9 +19,14 @@ S3+CloudFrontによる静的WebホスティングはAWSに慣れている人で�
 
 === Amplify Console
 
-そうした状況を受けてか、2018年11月にAWSからAmplify Consoleがリリースされ、@<fn>{f9c89212-b773-4141-8af7-e644d93cca79}2019年4月に東京リージョンでも使えるようになりました。
+Amplify Consoleは、2018年11月にAWSからリリースされた静的Webホスティングサービスです。@<fn>{f9c89212-b773-4141-8af7-e644d93cca79}2019年4月に東京リージョンでも使えるようになりました。
+CloudFrontとS3とCodeBuildの設定を自動化したサービスと言えるかもしれません。ただし、CloudFrontやS3のリソースはAWSが管理するAWSアカウント内に作成され、私達が気にする必要はありません。
 
-TODO: 内部的にS3+CloudFront＋CodeBuild、スクショ
+#@+++
+ここはjustInCaseで許可取ってから載せる
+実際にAmplify Console で構築したサービスをWappalyzer@<fn>{00b1467c-cbe4-4e05-8756-7f2570bcdaab}で検索すると、CloudFrontとS3で構築されています。
+//footnote[00b1467c-cbe4-4e05-8756-7f2570bcdaab][Webサイトの技術スタックを解析するアプリケーション(https://www.wappalyzer.com/)]
+#@---
 
 === Amplify Console以外の静的Webホスティングサービス
 
