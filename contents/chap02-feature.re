@@ -11,14 +11,20 @@ GitHubなどのGitプロバイダーと組み合わせて利用するAmplify Con
 そのように、CI/CDパイプラインを任意のタイミングで起動するための機能を紹介します。
 
  * Gitプロバイダーとの連携機能(GitHub, BitBucket, GitLab, AWS CodeCommit)
- * Pull RequestごとにPreviewの作成
+ * Pull RequestごとにWeb Previewのデプロイ
  * ビルド成果物を保存しているストレージの直接指定(Manual Deploy)
  * Incoming WebHookによるビルド実行
 
-=== Pull Request Previewの悩み
+=== Pull RequestのWeb Previewについて
 
-Pull Requestを自動で検出してくれるのは良いものの、Previewのビルド・デプロイが成功・失敗したときにbotによるコメントなどはありません。
-また、ビルドが失敗した時の原因はAWSのコンソールで確認する必要があります。
+GitHub等のPull Requestごとにビルドを行い、一時的なURLに成果物をデプロイしてWebで確認できる機能です。
+
+GitHubでPull Requestに対するWeb Previewを有効にするには、対象のリポジトリに対してアクセス権のあるGitHubユーザーがAmplify Consoleに対して権限を付与する必要があります。
+チームで運用する場合は、GitHub側にシステムユーザーを作成して権限を付与するのがよいでしょう。
+
+Web Previewには悩みもあります。
+例えばビルドに失敗した場合、GitHubのコンソールで理由を知ることはできません。毎回Amplify Consoleにアクセスする必要があります。
+また、短い間隔でコミットを連投した場合の挙動が不安定です。詳細は第5章のトラブルシューティングをご覧ください。
 
 === Incoming WebHookのユースケース
 
@@ -51,7 +57,7 @@ AWSのコンソールからメール通知を設定できます。
 内部的にCloudFrontとS3を利用しています。Basic認証やキャッシュ無効化など、CloudFrontとS3の構成ではひと手間必要だった機能がマネージドに提供されているのは嬉しいですね。
 ちなみにBasic認証ではブランチごとにパスワードを変更でき、またパスワードそのものの有無も設定できます。
 
- * Webサイトのホスティング・CDN
+ * Webコンテンツのホスティング・CDN
  * Basic認証によるアクセス制限
  * カスタムヘッダーの設定
  * リダイレクトの設定

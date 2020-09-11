@@ -4,7 +4,7 @@
 @<br>{}
 
 Amplify Consoleを使えば、フロントエンド開発のベストプラクティスを手軽に導入できます。Amplify Consoleの登場以前は、AWSであればS3、CloudFront、CodeBuildなどのCIサービスを組み合わせて自前でCI/CDパイプラインを用意する必要がありました。
-Amplify Consoleの登場によって、それらの作業は不要になりました。また、Pull Requestの作成に応じたPreview用のWebサイトのデプロイなどの機能も提供されています。
+Amplify Consoleの登場によって、それらの作業は不要になりました。また、Pull Requestの作成に応じたPreview用のWebコンテンツのデプロイなどの機能も提供されています。
 @<br>{}
 
 便利な一方で、Amplify Consoleは登場してから日の浅いサービスでもあります。通知やビルドの設定で悩まされることは誰もが通る道です。また、Amplifyファミリー、特にAmplify CLIと混同することで、検索がしづらくなっている面も否めません。本書がそうした状況で、少しでもAmplify Consoleを実践するための助けになれば幸いです。
