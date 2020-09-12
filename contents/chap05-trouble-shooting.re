@@ -9,7 +9,9 @@
 === カスタムドメインのセットアップ時、CNAMEが既に存在するエラー
 
 Amplify ConsoleでホスティングするWebコンテンツは、実際にはAWSが管理するAWSアカウント内のCloudFrontでホスティングされています。
-CloudFrontには、複数のディストリビューションに対して同じCNAMEエイリアスを使用できない制約があります。したがって、Amplify Consoleに接続したかったCNAMEエイリアスを持つCloudFrontディストリビューションが既にある場合、CNAMEが設定できません。@<fn>{86bca824-a2ca-4522-a864-4c6138d15b5d}
+ところで、CloudFrontには、複数のディストリビューションに対して同じCNAMEエイリアスを使用できない制約があります。
+//blankline
+したがって、Amplify Consoleに接続したかったCNAMEエイリアスを持つCloudFrontディストリビューションが既にある場合、CNAMEが設定できません。@<fn>{86bca824-a2ca-4522-a864-4c6138d15b5d}
 
 ==== 対策
 ドキュメントにあるようにCloudFront側のエイリアス設定を削除すればOKです。@<fn>{159a775e-ee7e-4068-b87d-0ee34e54b843}

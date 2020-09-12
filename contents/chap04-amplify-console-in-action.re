@@ -32,7 +32,7 @@ Amplify ConsoleのCI/CDワークフロー中に、別のAWSリソースにアク
 さて、EventBridgeがAmplify Consoleのビルドイベントをフックする仕組みですが、Amplify Consoleアプリケーションと対象のブランチによって一意になる名前のEventBridge Ruleに対して自動でイベントが通知されています。
 例えば、アプリケーションのIDが@<b>{abcde12345678}、対象のブランチが@<b>{master}なら、@<b>{amplify-abcde12345678-master-branch-notification}という名前のRuleに対して自動でイベントが通知されます。
 //blankline
-ちなみに、全てのブランチが対象の場合は@<b>{amplify-abcde12345678-AMPLIBRANCHSENTINEL-branch-notificatio}のような名前になります。
+ちなみに、全てのブランチが対象の場合は@<b>{amplify-abcde12345678-AMPLIBRANCHSENTINEL-branch-notification}のような名前になります。
 
 EventBridgeのRuleが定まれば、後はLambdaを定義するだけです。
 参考までに、以下のようなイベントが流れてきます。

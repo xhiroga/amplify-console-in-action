@@ -59,7 +59,9 @@ AWS Amplifyブランドで提供されるサービスは以下の通りです。
  * Amplify Console
 
 特に注意したいのは、Amplifyによる静的WebホスティングサービスはAmplify ConsoleとAmplify CLIの2つがあることです。
-Amplify CLIはいわばブートストラップで、ユーザーの質問に対して動的にCloudFormationのテンプレートを生成・デプロイします。その中には、CloudFront+S3やAmplify Consoleによる静的Webホスティングも含まれます。
+Amplify CLIはいわばブートストラップで、ユーザーの質問に対して動的にCloudFormationのテンプレートを生成・デプロイします。
+その中には、CloudFront+S3やAmplify Consoleによる静的Webホスティングも含まれます。
+//blankline
 Amplify Consoleについて検索していたら、いつの間にかCloudFront+S3を構築していた...とならないよう、Amplifyに関する記事を読むときはAmplify CLIとAmplify Consoleのどちらを指しているのか注意してください。
 
 //note[コラム: 静的ウェブホスティングという分類について]{

@@ -9,6 +9,7 @@ AWS Amplify Consoleの機能は、インテグレーション・ビルド・ホ�
 
 Amplify Consoleは、マネジメントコンソールから手軽にGitHubなどのリポジトリと接続したワークフローを構築できます。
 それらの接続は、Amplify ConsoleのビルドのトリガーとなるWebhookをGitプロバイダーに登録する形で実装されています。
+//blankline
 したがって、Webhookを利用して任意のタイミングでビルドを実行することもできます。機能は以下の通りです。
 
  * Incoming Webhookによるビルド実行
@@ -29,10 +30,10 @@ Amplify Consoleは、マネジメントコンソールから手軽にGitHubな�
 === Pull Requestの Web Previewについて
 
 GitHubなどで作成されたPull Requestごとに、成果物を一時的なURLにデプロイしてWebでPreviewできる機能です。
-
+//blankline
 GitHubでWeb Previewを有効にするには、対象のリポジトリに対してアクセス権のあるGitHubユーザーがAmplify Consoleに対して権限を付与する必要があります。
 チームで運用する場合は、GitHub側にシステムユーザーを作成して作業するのがよいでしょう。
-
+//blankline
 便利な一方で、Web Previewには悩みもあります。
 例えばビルドに失敗した場合、原因を知るためにAmplify Consoleにアクセスしなければいけません。GitHubのコンソールには原因が表示されないためです。
 また、短い間隔でコミットを連投した場合の挙動が不安定です。詳細は@<secref>{chap05-trouble-shooting|ビルドに関するトラブル}をご覧ください。
@@ -71,7 +72,10 @@ CloudFrontとS3をベースに、Basic認証やキャッシュの即時無効化
 == Amplify Console vs CloudFront+S3の機能比較
 
 Amplify Consoleのパフォーマンスは、CloudFront+S3 と同レベルです。しかし、機能の違いがあります。
+//blankline
 Amplify Consoleの優位点は、コミットごとの即時キャッシュ無効化・ブランチごとの自動デプロイ・Pull Request のWeb Preview 作成、パスワード保護などがマネージドサービスとして提供されていることです。
-一方で、CloudFrontでは可能だったLambda@Edgeの利用は現在サポートされていません。したがって、IPアドレスによるアクセス制限・サーバーサイドレンダリングなどを実装することができません。@<fn>{c52cda50-2930-4c8c-a0c4-78b9632e9fbf}
+//blankline
+一方で、CloudFrontでは可能だったLambda@Edgeの利用は現在サポートされていません。
+したがって、IPアドレスによるアクセス制限・サーバーサイドレンダリングなどを実装することができません。@<fn>{c52cda50-2930-4c8c-a0c4-78b9632e9fbf}
 
 //footnote[c52cda50-2930-4c8c-a0c4-78b9632e9fbf][Amplify Consoleの前段にCloudFrontを配置してLambda@Edgeを利用する、という方法はあります。]
