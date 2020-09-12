@@ -48,7 +48,7 @@ https://console.aws.amazon.com/amplify/home#/*************/**********/dev
  * Slack通知のために、Amplify Console Appと同時にEventBridgeのRuleを作成したいため。
 
 ただし、マネジメントコンソール以外からAmplify Consoleアプリケーションを作る場合は、Gitプロバイダーのトークンを明示的に渡す必要があります。
-筆者のチームでは、SecretManagerにGitHubのPersonal Access Tokenを保存し、それをAWS CDKから参照することで解決しています。
+筆者のチームでは、Secret ManagerにGitHubのPersonal Access Tokenを保存し、それをAWS CDKから参照することで解決しています。
 
 == Terraform
 

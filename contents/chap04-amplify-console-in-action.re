@@ -9,37 +9,33 @@ Amplify Consoleを複数のWebアプリおよび本番を含む複数の環境�
 === マネジメントコンソール以外から独自のDockerイメージを使用する
 
 ドキュメントには記述がありませんが、マネジメントコンソール以外からでもビルドに使用するイメージを変更できます。
-環境変数に `_CUSTOM_IMAGE` を設定し、値に `justincasetech/node:12.14.1-aws-cli-stretch` のようにオリジナルのDockerイメージを指定することで可能です。
-
-最新バージョンのNode.jsを利用したいケースなどで有益ではないでしょうか。
+環境変数に @<b>{_CUSTOM_IMAGE} を設定し、値に @<b>{justincasetech/node:12.14.1-aws-cli-stretch} のようにオリジナルのDockerイメージを指定することで可能です。
 
 === サービスロールの変更
 
-AmplifyのCI/CDワークフロー中に、別のAWSリソースにアクセスしたい場合があります。
+Amplify ConsoleのCI/CDワークフロー中に、別のAWSリソースにアクセスしたい場合があります。
 例えばParameter StoreやSecret ManagerからAPIキーなどを取得するケースでしょうか。
-そうした場合、AmplifyのためのIAM Roleを作成し、Amplifyで使用するように指定するとアクセス可能になります。
-
-なお、サービスロール自体はAmplifyのコンソールではなくIAMのコンソールからでも作成可能です。
-その際は Trusted entitiesで`amplify.amazonaws.com` を指定してください。
+そうした場合、Amplify ConsoleのためのIAM Roleを作成し、Amplifyで使用するように指定するとアクセス可能になります。
+//blankline
+なお、サービスロール自体はAmplify Consoleの画面ではなくIAMの画面からでも作成可能です。
+その際は Trusted entitiesで@<b>{amplify.amazonaws.com}を指定してください。
 
 === メール以外の通知
 
-公式ドキュメントには説明がありませんが、EventBridgeとLambdaを組み合わせることでSlackなどに通知が送れるようになります。
-
-そもそもマネジメントコンソールから設定できるメール通知ですが、以下のようなサービスの組み合わせで成り立っています。
-
-Amplify Console -> EventBridge -> SNS
-
-ここでAmazon EventBridgeについて簡単にご説明します。AWSのサービス内で発生した事象を通知してくれるサービスで、例えばECSのタスクの状態変化に応じてLambdaを起動するようなことが可能です。
-したがってAmplify ConsoleからEventBridgeにメッセージを送信する設定ができれば、ビルド通知のカスタマイズも可能ということがわかると思います。
-
-さて、Amplify ConsoleからEventBridgeにイベントが通知される仕組みですが、Amplify Consoleアプリケーションと対象のブランチによって一意になる名前のEventBridge Ruleに対して自動でイベントが通知されています。
-例えば、アプリケーションのIDが `abcde12345678`、対象のブランチが `master` なら、 `amplify-abcde12345678-master-branch-notification` という名前のRuleに対して自動でイベントが通知されます。
-ちなみに、全てのブランチが対象の場合は `amplify-abcde12345678-AMPLIBRANCHSENTINEL-branch-notification` のような名前になります。
+そもそも、マネジメントコンソールから設定するメール通知は、以下サービスの組み合わせで成り立っています。
+//blankline
+@<b>{Amplify Console → EventBridge → SNS}
+//blankline
+ここでEventBridgeについて簡単にご説明します。AWSのサービス内で発生した事象を通知してくれるサービスで、例えばECSのタスクの状態変化に応じてLambdaを起動するようなことが可能です。
+したがって、Amplify ConsoleのビルドイベントをEventBridgeでフックし、そこからLambdaなどを起動すれば、Slackなど任意の通知が可能になります。
+//blankline
+さて、EventBridgeがAmplify Consoleのビルドイベントをフックする仕組みですが、Amplify Consoleアプリケーションと対象のブランチによって一意になる名前のEventBridge Ruleに対して自動でイベントが通知されています。
+例えば、アプリケーションのIDが@<b>{abcde12345678}、対象のブランチが@<b>{master}なら、@<b>{amplify-abcde12345678-master-branch-notification}という名前のRuleに対して自動でイベントが通知されます。
+//blankline
+ちなみに、全てのブランチが対象の場合は@<b>{amplify-abcde12345678-AMPLIBRANCHSENTINEL-branch-notificatio}のような名前になります。
 
 EventBridgeのRuleが定まれば、後はLambdaを定義するだけです。
 参考までに、以下のようなイベントが流れてきます。
-
 
 //terminal[Lambdaが受け取るEvent(ビルド成功時)]{
 {
@@ -89,9 +85,14 @@ EventBridgeのRuleが定まれば、後はLambdaを定義するだけです。
 
 === メンテナンス画面の表示
 
-Amplify Consoleでは、カスタムドメインに紐づくブランチを任意のタイミングで切り替えることができます。
-これを利用して、メンテナンス画面に数秒程度で切り替えることができます。
+Amplify Consoleでは、カスタムドメインに紐づくブランチを任意のタイミングで切り替えることができます。これを利用して、Webサイトを数秒程度でメンテナンス画面に切り替えられます。
+手順は以下の通りです。
 
+ 1. masterブランチとは別に、maintenanceなどのブランチを作成する。
+ 2. maintenanceブランチでは、Webサイトがメンテナンス中の旨だけを表示するようにする。
+ 3. maintenanceブランチをAmplify Consoleに接続する。
+ 4. メンテナンス中にしたいタイミングで、ドメイン管理から接続先ブランチをmaintenanceにする。
+ 5. メンテナンスが終わったら、ドメイン管理から接続先をmasterに戻す。
 
 === ビルド中にスイッチロール
 
@@ -110,9 +111,10 @@ Amplify Consoleでは、カスタムドメインに紐づくブランチを任�
     - aws secretsmanager get-secret-value --secret-id "github-deploy-key" --output text --query "SecretString" > ~/.ssh/id_rsa_deploy_key
 //}
 
-
-
 == PrivateなGit Submodule
- * どうしてもサブモジュールでやりたい人向けのdeploy key管理方法
- * subtree基本的に楽だが...
- * （npmモジュール化するのがベストと思われるが実際にやったことがないので説得力がない）
+
+チームによっては、Webアプリケーションで利用しているモジュールをGit Submoduleで管理していると思います。
+しかし、2020年9がつ日現在、残念なことにAmplify ConsoleはプライベートなGit Submoduleに対応していません。
+//blankline
+したがってGit Subtreeやnpmモジュールを利用したほうが楽なのですが、どうしてもGit Submoduleを利用したい場合にはDeploy KeyをSecret Managerで管理するのがおすすめです。
+なお、Amplify Consoleがデフォルトで用意するIAMロールはSecret Managerへのアクセス権限がないので、自前で用意したサービスロールを設定するようにしてください。
