@@ -1,12 +1,12 @@
 = はじめに
 
 本書を手にとっていただきありがとうございます。
-Amplify Consoleを利用してWebサイト・Webアプリケーションのホスティングを検討している方や、すでに活用されている方に対して、Amplify Consoleを現場で運用して得られた知見を共有したいと考えて本書を執筆しました。
+Amplify Consoleを利用してWebサイト・Webアプリケーションのホスティングを検討している方や、既に活用されている方に対して、Amplify Consoleを現場で運用して得られた知見を共有したいと考えて本書を執筆しました。
 //blankline
 
 Amplify Consoleを使えば、フロントエンド開発のベストプラクティスを手軽に導入できます。
-Amplify Consoleの登場以前は、AWSであればS3、CloudFront、CodeBuild等を組み合わせたCI/CDパイプラインを自前で構築する必要がありました。
-Amplify Consoleの登場によって、それらの構築は不要になりました。それだけでなく、Pull Requestの作成に応じたWeb Previewやコミットごとのキャッシュの自動的な無効化などの機能も提供されています。
+Amplify Consoleの登場以前は、AWSであればS3、CloudFront、CodeBuildなどを組み合わせたCI/CDパイプラインを自前で構築する必要がありました。
+Amplify Consoleの登場によって、それらの構築は不要になりました。それだけでなく、Pull Requestの作成に応じたWeb Previewやコミットごとのキャッシュの自動的な即時無効化などの機能も提供されています。
 //blankline
 
 しかし、Amplify Consoleは登場してから日の浅いサービスでもあります。便利な一方で、通知やビルドの設定で悩まされることは誰もが通る道です。
