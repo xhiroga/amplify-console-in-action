@@ -29,14 +29,15 @@ Amplify Consoleのアプリケーションを削除するときは、忘れず�
 
 == ビルドに関するトラブル
 
-//notice[注意]{
+//warning[注意]{
 以下の挙動は2020年9月12日現在、筆者が手元で確認したものです。Amplify Consoleの公式な仕様として公開されているものではありません。
 //}
 
 === Web Previewのステータスが更新されない
 
-Amplify Console側ではビルドが完了しているにも関わらず、GitHubのPull Requestでは `Queued = Waiting to run this check...` のまま更新されないことがあります。
+Amplify Console側ではビルドが完了しているにも関わらず、Pull Requestのチェックのステータスが@<b>{Queued = Waiting to run this check...}のまま更新されないことがあります。
 短い間隔でCommitを連続してPushした場合、特に直前のCommitに対するWeb Previewのビルドを実行している間に、新しいCommitをPushした場合に起きることがあるようです。
+//blankline
 推測ですが、Amplify ConsoleでGitHubのCheckによるビルドが複数走っている場合、初めのビルドが完了した時点で後続のビルドのステータス更新が実行されなくなるのかもしれません。
 
 ==== 対策
@@ -47,6 +48,7 @@ Amplify Console側ではビルドが完了しているにも関わらず、GitHu
 
 Amplify Consoleでは、GitHubのPull Requestに対するWeb Previewの実行中に、新しいWeb Previewが発生するとビルドが保留されます。
 保留中のビルドがある場合に更に新しいWeb Previewが発生すると、保留中のビルドが対象とするコミットが書き換わります。その際、GitHub側でコミットに対するチェックが発生していないことになります。
+//blankline
 要するに、短い間隔でCommitを3連続以上でPushすると、Pull RequestのCheckからAmplify ConsoleのWeb Previewが消えてしまいます。
 
 ==== 対策
