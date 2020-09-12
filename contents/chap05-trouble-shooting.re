@@ -8,7 +8,7 @@
 
 === カスタムドメインのセットアップ時、CNAMEが既に存在するエラー
 
-Amplify ConsoleでホスティングするWebコンテンツは、実際にはAWSが管理するAWSアカウント上のCloudFrontでホスティングされています。
+Amplify ConsoleでホスティングするWebコンテンツは、実際にはAWSが管理するAWSアカウント内のCloudFrontでホスティングされています。
 CloudFrontには、複数のディストリビューションに対して同じCNAMEエイリアスを使用できない制約があります。したがって、Amplify Consoleに接続したかったCNAMEエイリアスを持つCloudFrontディストリビューションが既にある場合、CNAMEが設定できません。@<fn>{86bca824-a2ca-4522-a864-4c6138d15b5d}
 
 ==== 対策
@@ -28,6 +28,10 @@ Amplify Consoleでは、AWS側でアプリケーションを削除してもGitHu
 Amplify Consoleのアプリケーションを削除するときは、忘れずにWebhookも消すようにしたいですね！
 
 == ビルドに関するトラブル
+
+//notice[注意]{
+以下の挙動は2020年9月12日現在、筆者が手元で確認したものです。Amplify Consoleの公式な仕様として公開されているものではありません。
+//}
 
 === Web Previewのステータスが更新されない
 
