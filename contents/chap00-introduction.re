@@ -1,20 +1,25 @@
 = はじめに
 
-本書を手にとっていただきありがとうございます。Amplify Consoleを利用してWebサイト・Webアプリケーションのホスティングを検討している方や、すでに活用されている方に対して、Amplify Consoleを現場で運用して得られた知見を共有したいと考えて本書を執筆いたしました。
+本書を手にとっていただきありがとうございます。
+Amplify Consoleを利用してWebサイト・Webアプリケーションのホスティングを検討している方や、すでに活用されている方に対して、Amplify Consoleを現場で運用して得られた知見を共有したいと考えて本書を執筆しました。
 //blankline
 
-Amplify Consoleを使えば、フロントエンド開発のベストプラクティスを手軽に導入できます。Amplify Consoleの登場以前は、AWSであればS3、CloudFront、CodeBuildなどのCIサービスを組み合わせて自前でCI/CDパイプラインを用意する必要がありました。
-Amplify Consoleの登場によって、それらの作業は不要になりました。また、Pull Requestの作成に応じたPreview用のWebコンテンツのデプロイなどの機能も提供されています。
+Amplify Consoleを使えば、フロントエンド開発のベストプラクティスを手軽に導入できます。
+Amplify Consoleの登場以前は、AWSであればS3、CloudFront、CodeBuild等を組み合わせたCI/CDパイプラインを自前で構築する必要がありました。
+Amplify Consoleの登場によって、それらの構築は不要になりました。それだけでなく、Pull Requestの作成に応じたWeb Previewやコミットごとのキャッシュの自動的な無効化などの機能も提供されています。
 //blankline
 
-便利な一方で、Amplify Consoleは登場してから日の浅いサービスでもあります。通知やビルドの設定で悩まされることは誰もが通る道です。また、Amplifyファミリー、特にAmplify CLIと混同することで、検索がしづらくなっている面も否めません。本書がそうした状況で、少しでもAmplify Consoleを実践するための助けになれば幸いです。
+しかし、Amplify Consoleは登場してから日の浅いサービスでもあります。便利な一方で、通知やビルドの設定で悩まされることは誰もが通る道です。
+また、Amplifyファミリー、特にAmplify CLIと混同することで、検索がしづらくなっている面も否めません。
+そうした状況で、本書が少しでもAmplify Consoleを実践するための助けになれば幸いです。
 //blankline
 
-筆者は2019年に業務でAmplify Consoleを導入して以来、それから半年のうちに3つ以上のAWSアカウントで合計20以上のWebアプリケーションをセットアップしてきました。
+筆者は2019年に業務でAmplify Consoleを導入して以来、半年のうちに3つ以上のAWSアカウントで合計20以上のWebアプリケーションをセットアップしてきました。
 少人数のチームで多くのアプリケーションを管理するために、Amplify Consoleの機能の活用、CloudFormationおよびAWS CDKを使った一括管理、様々なトラブルシューティングを行ってきました。
 //blankline
 
-本書では、そうした経験から得られたAmplify Consoleを扱う上での知見を共有します。これからAmplify Consoleに触る方も、現在Amplify Consoleを導入されている方も、Amplify Consoleを実践する上で何らかの発見があれば幸いです。
+本書では、そうした経験から得られたAmplify Consoleを扱う上での知見を共有します。
+これからAmplify Consoleに触る方も、既にAmplify Consoleを導入されている方も、Amplify Consoleを実践する上で何らかの発見があれば幸いです。
 
 == 本書で扱うこと
 
@@ -24,7 +29,7 @@ Amplify Consoleの登場によって、それらの作業は不要になりま�
 
 == 本書で扱わないこと
 
- * Amplify Consoleによるチュートリアル
+ * Amplify Consoleのチュートリアル
  * Amplify Framework（Amplify CLIなど）を利用した開発
 
 == 本書の構成
