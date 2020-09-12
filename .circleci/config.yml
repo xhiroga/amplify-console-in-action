@@ -22,7 +22,7 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/work
-      - run: aws s3 cp amplify-console-in-action.pdf s3://hiroga-cognito-user-migration/amplify-console-in-action.pdf --acl public-read
+      - run: aws s3 cp amplify-console-in-action.pdf s3://hiroga-techbookfest/812bd999-9d8f-4ffd-b463-19053fef9c60.pdf --acl public-read
 
 workflows:
   version: 2
