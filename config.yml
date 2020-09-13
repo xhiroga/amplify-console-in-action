@@ -26,7 +26,7 @@ language: ja
 # 読みを入れる例 booktitle: {name: "Re:VIEW EPUBサンプル", file-as: "リビューイーパブサンプル"}
 # （タイトルやサブタイトルが長い場合は、好みの箇所に改行を入れてください。）
 booktitle: |-
-  Amplify Console 実践入門
+  AWS Amplify Console 実践入門
 subtitle: |-
 
 # 著者名。「, 」で区切って複数指定できる
