@@ -9,7 +9,7 @@ Amplify Consoleを複数のWebアプリおよび本番を含む複数の環境�
 === マネジメントコンソール以外から独自のDockerイメージを使用する
 
 ドキュメントには記述がありませんが、マネジメントコンソール以外からでもビルドに使用するイメージを変更できます。
-環境変数に @<b>{_CUSTOM_IMAGE} を設定し、値に @<b>{justincasetech/node:12.14.1-aws-cli-stretch} のようにオリジナルのDockerイメージを指定することで可能です。
+環境変数に @<code>{_CUSTOM_IMAGE} を設定し、値に @<code>{justincasetech/node:12.14.1-aws-cli-stretch} のようにオリジナルのDockerイメージを指定することで可能です。
 
 === サービスロールの変更
 
@@ -18,7 +18,7 @@ Amplify ConsoleのCI/CDワークフロー中に、別のAWSリソースにアク
 そうした場合、Amplify ConsoleのためのIAM Roleを作成し、Amplifyで使用するように指定するとアクセス可能になります。
 //blankline
 なお、サービスロール自体はAmplify Consoleの画面ではなくIAMの画面からでも作成可能です。
-その際は Trusted entitiesで@<b>{amplify.amazonaws.com}を指定してください。
+その際は Trusted entitiesで@<code>{amplify.amazonaws.com}を指定してください。
 
 === メール以外の通知
 
@@ -30,9 +30,9 @@ Amplify ConsoleのCI/CDワークフロー中に、別のAWSリソースにアク
 したがって、Amplify ConsoleのビルドイベントをEventBridgeでフックし、そこからLambdaなどを起動すれば、Slackなど任意の通知が可能になります。
 //blankline
 さて、EventBridgeがAmplify Consoleのビルドイベントをフックする仕組みですが、Amplify Consoleアプリケーションと対象のブランチによって一意になる名前のEventBridge Ruleに対して自動でイベントが通知されています。
-例えば、アプリケーションのIDが@<b>{abcde12345678}、対象のブランチが@<b>{master}なら、@<b>{amplify-abcde12345678-master-branch-notification}という名前のRuleに対して自動でイベントが通知されます。
+例えば、アプリケーションのIDが@<code>{abcde12345678}、対象のブランチが@<code>{master}なら、@<code>{amplify-abcde12345678-master-branch-notification}という名前のRuleに対して自動でイベントが通知されます。
 //blankline
-ちなみに、全てのブランチが対象の場合は@<b>{amplify-abcde12345678-AMPLIBRANCHSENTINEL-branch-notification}のような名前になります。
+ちなみに、全てのブランチが対象の場合は@<code>{amplify-abcde12345678-AMPLIBRANCHSENTINEL-branch-notification}のような名前になります。
 
 EventBridgeのRuleが定まれば、後はLambdaを定義するだけです。
 参考までに、以下のようなイベントが流れてきます。

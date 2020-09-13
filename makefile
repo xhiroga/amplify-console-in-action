@@ -1,7 +1,7 @@
-pdf = amplify-console-in-action.pdf
+PDF = amplify-console-in-action.pdf
 
-$(pdf):
-	docker-compose run --rm review && open $(pdf)
+$(PDF):
+	docker-compose run --rm review && open $(PDF)
 
 clean:
-	rm $(pdf)
+	rm $(PDF)
