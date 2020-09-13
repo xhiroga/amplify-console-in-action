@@ -18,7 +18,7 @@ review_version: 2.0
 inherit: ["config-starter.yml"]
 
 # ブック名(ファイル名になるもの。ASCII範囲の文字を使用)
-bookname: amplify-console-in-action-trial
+bookname: amplify-console-in-action
 # 記述言語。省略した場合はja
 language: ja
 
@@ -26,7 +26,7 @@ language: ja
 # 読みを入れる例 booktitle: {name: "Re:VIEW EPUBサンプル", file-as: "リビューイーパブサンプル"}
 # （タイトルやサブタイトルが長い場合は、好みの箇所に改行を入れてください。）
 booktitle: |-
-  [体験版] AWS Amplify Console 実践入門
+  AWS Amplify Console 実践入門
 subtitle: |-
 
 # 著者名。「, 」で区切って複数指定できる
@@ -188,7 +188,7 @@ titlepage: true
 #   latex: "listings"
 
 # カタログファイル名を指定する
-catalogfile: catalog.trial.yml
+catalogfile: catalog.prod.yml
 
 # reファイルを格納するディレクトリ。デフォルト値は null。
 # 値にたとえば「contents」を指定すると、reファイルはすべて「contents」
@@ -354,7 +354,7 @@ pdfmaker:
   ### ・デフォルトでは印刷用PDFが生成させるので挿入されません。
   ### ・config-starter.ymlで「target: ebook」を設定するか、または
   ###   環境変数「STARTER_TARGET=ebook」を設定すると、電子用になり挿入されます。
-  coverpdf_files: [cover-trial.pdf] # PDFファイル名（複数指定可）（PNGやJPGはダメ）
+  coverpdf_files: [cover.pdf] # PDFファイル名（複数指定可）（PNGやJPGはダメ）
   coverpdf_option: "offset=-0mm 0mm" # 必要に応じて微調整すること
   #
   # pdfmaker:階層を使うものはここまで

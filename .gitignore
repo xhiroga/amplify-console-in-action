@@ -5,6 +5,8 @@
 *.erb.orig
 tmp/*
 amplify-console-in-action-pdf/*
+amplify-console-in-action-trial-pdf/*
+config.yml
 *.pdf
 !cover.pdf
 .local

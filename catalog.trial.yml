@@ -1,0 +1,15 @@
+PREDEF:
+  - chap00-introduction.re
+
+CHAPS:
+  - chap01-getting-started.re
+  - chap02-feature.trial.re
+  - chap03-infrastructure.trial.re
+  - chap04-amplify-console-in-action.trial.re
+  - chap05-trouble-shooting.re
+
+APPENDIX:
+  - chap06-shoulders-of-giants.re
+
+POSTDEF:
+  - chap99-postscript.trial.re

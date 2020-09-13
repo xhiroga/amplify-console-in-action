@@ -2,7 +2,6 @@
 
 ## Starter独自設定
 starter:
-
   ## 出力のターゲット。環境変数 $STARTER_TARGET で上書き可能。
   ## * pbook: 印刷用のモノクロPDFを出力。printing bookの略。
   ## * ebook: 電子用のカラーPDFを出力。electric bookの略。
@@ -15,10 +14,10 @@ starter:
 
   ## 本文のフォント（注：実験的）
   ## （Notoフォントが前提なので、Docker環境が必要。MacTeXでは使わないこと）
-  fontfamily_ja: mincho    # (日本語) mincho: 明朝体, gothic: ゴシック体
-  fontfamily_en: roman     # (英数字) roman: ローマン体, sansserif: サンセリフ体
-  fontweight_ja: normal    # (日本語) normal: 通常, light: 細字
-  fontweight_en: normal    # (英数字) normal: 通常, light: 細字
+  fontfamily_ja: mincho # (日本語) mincho: 明朝体, gothic: ゴシック体
+  fontfamily_en: roman # (英数字) roman: ローマン体, sansserif: サンセリフ体
+  fontweight_ja: normal # (日本語) normal: 通常, light: 細字
+  fontweight_en: normal # (英数字) normal: 通常, light: 細字
 
   ## 章 (Chapter) タイトルの装飾
   ## （none: なし、underline: 下線、boldlines: 上下に太線）
@@ -56,13 +55,13 @@ starter:
   ## キャプション直後での改ページを防ぐために、最低限必要とする高さ
   ## （もしキャプション直後での改ページが発生するなら値を増やす。
   ##   もし十分なスペースがあるのに改ページされるなら値を減らす。）
-  caption_needspace: 4.8zh        # 全角文字4.8個分の高さ（実験で得た境界値）
+  caption_needspace: 4.8zh # 全角文字4.8個分の高さ（実験で得た境界値）
 
   ## プログラム（//list）のフォントサイズ
-  program_fontsize: small  # 'normal' or 'small'
+  program_fontsize: small # 'normal' or 'small'
 
   ## ターミナル（//cmd, //terminal）のフォントサイズ
-  terminal_fontsize: small  # 'normal' or 'small'
+  terminal_fontsize: small # 'normal' or 'small'
 
   ## プログラム用（//list）の等幅フォント。
   ##  * lmodern … LaTeXのデフォルト。1とl、0とOが見分けにくい。太字が目立たない。
@@ -83,12 +82,12 @@ starter:
   ## プログラム（//list）の表示幅をほんの少しだけ広げる。
   ## 折返し記号が右端まで届かず、あともう1文字入りそうなときに使う。
   ## 詳細は https://twitter.com/_kauplan/status/1162167825407963137
-  program_widen:   0.0mm         # 0.3mmとか
+  program_widen: 0.0mm # 0.3mmとか
 
   ## ターミナル（//terminal, //cmd）の表示幅をほんの少しだけ広げる。
   ## 折返し記号が右端まで届かず、あともう1文字入りそうなときに使う。
   ## 詳細は https://twitter.com/_kauplan/status/1162167825407963137
-  terminal_widen:  0.0mm         # 0.3mmとか
+  terminal_widen: 0.0mm # 0.3mmとか
 
   ## プログラム（//list）を枠で囲むか？
   program_border: false
@@ -105,7 +104,7 @@ starter:
   ## 画像が現在位置に入りきらず次ページに送られたとき、後続のテキストを現在位置に
   ## 流し込むかどうか。流し込まないと現在位置に大きなスペースができてしまう。
   ## またLaTeXの位置指定(t:top, b:bottom, p:posision)も指定可能。
-  image_position: H    # 現在位置にスペースが空く（要float.sty）
+  image_position: H # 現在位置にスペースが空く（要float.sty）
   #image_position: h   # 現在位置に後続テキストを流し込む
 
   ## 十分なスペースがあるのに節や項のタイトル直前で改ページされるのを避ける。
@@ -113,10 +112,10 @@ starter:
   ##   そのため、節(Section)のタイトル直後が1行だけで改ページされるくらいなら
   ##   節タイトルの直前で改ページすることをLaTeXは選ぶ。
   ##   このせいで、十分な空きがあるのに節タイトル前で改ページされることがある。）
-  page_clubline: true      # trueなら改ページを避ける
+  page_clubline: true # trueなら改ページを避ける
 
   ## リンクのURLを脚注に埋め込む（PDFでのみ）。
-  linkurl_footnote: true   # trueならリンクのURLを脚注に埋め込む（お勧め）
+  linkurl_footnote: false # trueならリンクのURLを脚注に埋め込む（お勧め）
 
   ## @<secref>{}において、親の節のタイトルを含めるか？
   secref_parenttitle: true # trueなら親の節のタイトルを含める
