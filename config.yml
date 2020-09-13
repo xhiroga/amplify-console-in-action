@@ -26,7 +26,7 @@ language: ja
 # 読みを入れる例 booktitle: {name: "Re:VIEW EPUBサンプル", file-as: "リビューイーパブサンプル"}
 # （タイトルやサブタイトルが長い場合は、好みの箇所に改行を入れてください。）
 booktitle: |-
-  実践Amplify Console
+  Amplify Console 実践入門
 subtitle: |-
 
 # 著者名。「, 」で区切って複数指定できる
@@ -80,9 +80,9 @@ date: 2020-09-12
 # 日付の後ろを空白文字で区切り、任意の文字列を置くことも可能。
 history: [["2020-09-12 ver 1.0"]]
 # [experimental] 新刊を頒布したイベント名（例：「技術書典6（2019年春）新刊」）
-pubevent_name:
+pubevent_name: 技術書典9
 # 権利表記(配列で複数指定可)
-rights: (C) 2020 小笠原寛明
+rights: (C) 2019 Hiroaki Ogasawara（@hiroga_cc）
 # description: 説明
 # subject: 短い説明用タグ(配列で複数指定可)
 # type: 書籍のカテゴリーなど(配列で複数指定可)
@@ -142,7 +142,7 @@ toc: true
 # cover: null
 #
 # 表紙に配置し、書籍の影絵にも利用する画像ファイル。省略した場合はnull (画像を使わない)。画像ディレクトリ内に置いてもディレクトリ名は不要(例: cover.jpg)
-#coverimage: cover.jpg
+#coverimage: null
 #
 # 表紙の後に大扉ページを作成するか。省略した場合はtrue (作成する)
 titlepage: true
@@ -355,7 +355,7 @@ pdfmaker:
   ### ・config-starter.ymlで「target: ebook」を設定するか、または
   ###   環境変数「STARTER_TARGET=ebook」を設定すると、電子用になり挿入されます。
   coverpdf_files: [cover.pdf] # PDFファイル名（複数指定可）（PNGやJPGはダメ）
-  coverpdf_option: "offset=-2.3mm 2.3mm" # 必要に応じて微調整すること
+  coverpdf_option: "offset=-0mm 0mm" # 必要に応じて微調整すること
   #
   # pdfmaker:階層を使うものはここまで
 
