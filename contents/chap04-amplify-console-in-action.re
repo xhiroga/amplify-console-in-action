@@ -111,7 +111,7 @@ Amplify Consoleでは、カスタムドメインに紐づくブランチを任�
     - aws secretsmanager get-secret-value --secret-id "github-deploy-key" --output text --query "SecretString" > ~/.ssh/id_rsa_deploy_key
 //}
 
-== PrivateなGit Submodule
+== プライベートなGit Submodule
 
 チームによっては、Webアプリケーションで利用しているモジュールをGit Submoduleで管理していると思います。
 しかし、2020年9がつ日現在、残念なことにAmplify ConsoleはプライベートなGit Submoduleに対応していません。

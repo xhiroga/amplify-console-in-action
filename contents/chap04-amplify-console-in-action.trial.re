@@ -43,6 +43,6 @@ Amplify Consoleでは、カスタムドメインに紐づくブランチを任�
 
 @<href>{https://techbookfest.org/product/4838711567056896, 製品版}でご覧ください。
 
-== PrivateなGit Submodule
+== プライベートなGit Submodule
 
 @<href>{https://techbookfest.org/product/4838711567056896, 製品版}でご覧ください。
