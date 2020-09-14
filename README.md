@@ -9,6 +9,7 @@ Amplify Console を導入された方・検討している方に向けて、@hir
 筆者は 2019 年に Amplify Console をプロダクションに導入して以来、3 つ以上の AWS アカウントで合計 20 以上の Web アプリケーションをセットアップしました。
 
 そうした経験から得た、Amplify Console の機能の概観・業務に取り入れるためのテクニック・トラブルシューティングなどにを紹介いたします。
+これから Amplify Console に触る方も、既に Amplify Console を導入されている方も、Amplify Console を実践する上での何らかの発見があれば幸いです。
 
 ### 体験版
 
@@ -18,8 +19,8 @@ https://manage.booth.pm/items/1560273
 ## 対象となる読者
 
 以下に当てはまる方は、本書を読むと AWS のドキュメントの理解・処理の実装が効率化できるかもしれません。
-・Amplify Consoleの導入を検討されている方
-・Amplify Consoleで手が届かない機能、困っていることの解決方法を探している方
+・Amplify Console の導入を検討されている方
+・Amplify Console で手が届かない機能、困っていることの解決方法を探している方
 
 以下に当てはまる方には、Amplify Console の役割を見直す効果があるかもしれません。
 ・現場で Amplify Console を利用されている方
