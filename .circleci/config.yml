@@ -6,7 +6,12 @@ jobs:
     working_directory: ~/work
     steps:
       - checkout
-      - run: export STARTER_TARGET=ebook; rake pdf
+      - run:
+          name: create pdf
+          command: |
+            ln -f config.prod.yml config.yml
+            export STARTER_TARGET=ebook; 
+            rake pdf
       - run: ls -l amplify-console-in-action.pdf
       - store_artifacts:
           path: ~/work/amplify-console-in-action.pdf
