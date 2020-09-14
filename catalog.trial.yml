@@ -1,4 +1,5 @@
 PREDEF:
+  - chap00-trial.re
   - chap00-introduction.re
 
 CHAPS:

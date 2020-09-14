@@ -21,5 +21,5 @@ Amplify Consoleの導入前はフロントエンドエンジニアと頑張っ�
 //blankline
 本書のご意見やご感想など、ぜひツイートいただけると嬉しいです。もっとAmplify Console事例を知りたいので、ぜひ何でも聞きたいです！
 
- * Mail: hiroga1030@gmail.com
- * Twitter: @hiroga_cc
+ * Mail: @<href>{mailto://hiroga1030@gmail.com, hiroga1030@gmail.com}
+ * Twitter: @<href>{https://twitter.com/hiroga_cc, @hiroga_cc}

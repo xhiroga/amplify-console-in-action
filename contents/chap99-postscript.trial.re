@@ -1,10 +1,8 @@
 = あとがき
 
-体験版をご覧いただき、ありがとうございました。お役に立てそうな本でしたか？
+体験版をご覧いただき、ありがとうございました。本書がどのようなものかお伝えできたでしょうか？
 //blankline
-もし役に立ちそうと感じていただけましたら、ぜひご購入いただいて感想をお寄せいただけますと大変嬉しいです。ぜひAmplify Consoleについて話しましょう！
+本書がお役に立てそうであれば、ぜひ@<href>{https://techbookfest.org/product/4838711567056896, 製品版}をご購入ください。そして、Amplify Consoleについて語るのを楽しみにしています！
 
-本書に関するご質問は以下の連絡先までお願いいたします。
-
- * Mail: hiroga1030@gmail.com
- * Twitter: @hiroga_cc
+ * Mail: @<href>{mailto://hiroga1030@gmail.com, hiroga1030@gmail.com}
+ * Twitter: @<href>{https://twitter.com/hiroga_cc, @hiroga_cc}
