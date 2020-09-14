@@ -78,7 +78,6 @@ Amplify Consoleについて検索していたら、いつの間にかCloudFront+
 //blankline
 悩んだ挙げ句、「この本はAmplify本なんだから、AWSでの呼び名を採用すればいいや」という半ば思考停止的な理由で本書では "静的ウェブホスティング" を用いることにしました。
 もし将来標準的な呼び名が決まったら、改訂版を出そうと思います。笑
-==[/column]
 
 //footnote[deeae56f-3189-4dbd-9f4b-6b9ac940520c][https://aws.amazon.com/jp/amplify/console/]
 //footnote[d95826c8-df94-444b-b0e8-a6c13af47edd][https://firebase.google.com/docs/hosting/]
