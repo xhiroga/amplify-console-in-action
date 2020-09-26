@@ -1,13 +1,13 @@
 = Features of Amplify Console
 //abstract{
-AWS Amplify Console’s functions can be classified into Integration, Build, and Hosting. This chapter will introduce readers to these functions and provides details for the ones commonly used by the author.
+AWS Amplify Console’s functions can be classified into Integration, Build, and Hosting. This chapter will introduce these functions to readers and provides details for the ones commonly used by the author.
 //}
 
 == Integration
 
-Amplify Console can easily construct a workflow using the management console with repositories such as GitHub. These repository connections are implemented by assigning Webhook as the Git provider, which also acts as the build trigger for Amplify Console.
+Amplify Console can easily construct a workflow using the management console with repositories such as GitHub. These repository connections are implemented by assigning webhook as the Git provider, which also acts as the build trigger for Amplify Console.
 //blankline
-Therefore, you can use Webhook to make a build anytime, with the following features already included:
+Therefore, you can use webhook to make a build anytime, with the following features already included:
 
  * Build with Incoming Webhook
  * Integration with Git providers (GitHub, Bitbucket, GitLab, AWS CodeCommit)
@@ -16,9 +16,9 @@ Therefore, you can use Webhook to make a build anytime, with the following featu
 
 === Use-case for Incoming Webhook
 
-The first that comes to mind would be updating Web contents with triggers other than repository source code updates. For example, when there is an update on headless CMS or modules such as Git Submodule, Git Subtree, or npm.
+The first that comes to mind would be updating web contents with triggers other than repository source code updates. For example, when there is an update on headless CMS or modules such as Git Submodule, Git Subtree, or npm.
 //blankline
-For some headless CMS services such as Contentful, you can assign Webhook from console request.
+For some headless CMS services such as Contentful, you can assign webhook from console request.
 //blankline
 Other than that, there are also cases where you want execute CI/CD with external services such as CircleCI, or if you want a gradual transfer to Amplify Console.
 
