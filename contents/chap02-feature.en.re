@@ -29,7 +29,7 @@ This feature allows for deploying the product to a temporary URL with every Pull
 To enable Web Preview in GitHub, a GitHub user with access rights to the target repository must authenticate Amplify Console. When working with a team, it is helpful to create a System User on the GitHub side.
 //blankline
 While convenient, Web Preview has its problems. As GitHub console does not show causes of error, one must access the Amplify Console to resolve possible errors occurred during a failed build. Furthermore, commits made in short intervals lead to instabilities as well. 
-Refer to @<secref>{chap05-trouble-shooting|Troubles during the build} for more details.
+Refer to @<secref>{chap05-trouble-shooting.en|Troubles during the build} for more details.
 
 == Builds
 
@@ -44,7 +44,7 @@ Most requirements for general CI services are met. It also has the merit of leav
 === Woes of the Build Notification
 
 You can set mail notifications from the management console. By hooking Amplify Console’s build events with EventBridge, any services other than Lambda can be executed as well. 
-Further explanation can be found in 4.1: @<secref>{chap04-amplify-console-in-action|Notifications Other than Emails}で解説します。
+Further explanation can be found in 4.1: @<secref>{chap04-amplify-console-in-action.en|Notifications Other than Emails}で解説します。
 
 == Hosting
 
