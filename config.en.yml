@@ -20,7 +20,7 @@ inherit: ["config-starter.yml"]
 # ブック名(ファイル名になるもの。ASCII範囲の文字を使用)
 bookname: amplify-console-in-action-en
 # 記述言語。省略した場合はja
-language: ja
+language: en
 
 # 書名
 # 読みを入れる例 booktitle: {name: "Re:VIEW EPUBサンプル", file-as: "リビューイーパブサンプル"}
