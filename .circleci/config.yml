@@ -12,13 +12,14 @@ anchors:
             ln -f "config.${ENV_NAME}.yml" config.yml
             export STARTER_TARGET=ebook; 
             rake pdf
+            mv ${BOOK_NAME}.pdf artifact.pdf
       - store_artifacts:
-          path: ~/work/${FILE_NAME}.pdf
+          path: ~/work/artifact.pdf
           destination: pdf
       - persist_to_workspace:
           root: ~/work
           paths:
-            - ${FILE_NAME}.pdf
+            - artifact.pdf
   - &deploy-anchor
     docker:
       - image: justincasetech/aws-cli:1.16.186-jq1.6-git
@@ -26,22 +27,22 @@ anchors:
     steps:
       - attach_workspace:
           at: ~/work
-      - run: aws s3 cp ${FILE_NAME}.pdf s3://hiroga-techbookfest/${FILE_UUID}.pdf --acl public-read
-      - run: aws s3 cp ${FILE_NAME}.pdf s3://hiroga-cognito-user-migration/${FILE_NAME}.pdf --acl public-read
+      - run: aws s3 cp artifact.pdf s3://hiroga-techbookfest/${BOOK_NAME}.pdf --acl public-read
+      - run: aws s3 cp artifact.pdf s3://hiroga-techbookfest/${BOOK_UUID}.pdf --acl public-read
 
 jobs:
   build-prod:
     <<: *build-anchor
     environment:
       ENV_NAME: prod
-      FILE_NAME: "amplify-console-in-action"
-      FILE_UUID: "812bd999-9d8f-4ffd-b463-19053fef9c60"
+      BOOK_NAME: "amplify-console-in-action"
+      BOOK_UUID: "812bd999-9d8f-4ffd-b463-19053fef9c60"
   deploy-prod:
     <<: *deploy-anchor
     environment:
       ENV_NAME: prod
-      FILE_NAME: "amplify-console-in-action"
-      FILE_UUID: "812bd999-9d8f-4ffd-b463-19053fef9c60"
+      BOOK_NAME: "amplify-console-in-action"
+      BOOK_UUID: "812bd999-9d8f-4ffd-b463-19053fef9c60"
 
 workflows:
   version: 2
