@@ -54,7 +54,7 @@ workflows:
               only: master
             tags:
               only: /deploy/
-      - deploy-pord:
+      - deploy-prod:
           context: hiroga-aws
           filters:
             branches:
