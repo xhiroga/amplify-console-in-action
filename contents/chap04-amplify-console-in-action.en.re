@@ -16,7 +16,7 @@ While not detailed in the documentation, it is possible to change the image used
 There are cases where you want to access other AWS resources during Amplify Console’s CI/CD workflow. For example, when you need access to the API key from Parameter Store or Secret Manager, you can create IAM Role for Amplify Console and enable access.
 //blankline
 
-You also can craete IAM Service Role from IAM, not only Amplify Console. If do so, you should specify @<code>{amplify.amazonaws.com} as trusted entities.s
+You also can craete IAM Service Role from IAM, not only Amplify Console. If do so, you should specify @<code>{amplify.amazonaws.com} as trusted entities.
 
 === Notifications Other than Emails
 
