@@ -22,7 +22,7 @@ This error is commonly encountered when transferring from a CloudFront hosted ap
 === Webhook residuals left in GitHub repository
 
 Webhook registered in GitHub is persistent even if the application is deleted from AWS in Amplify Console. Repeating attempts to setup and delete Amplify Console will cause an obscene amount of Webhooks attached to the GitHub repository.
- 
+
 ==== Solution:
 You will have to remove them by hand. Take a note of the Amplify Console’s application ID and open up each and every Webhook entry in the repository, deleting any unused entries after confirming the Payload URL. This process needs to be repeated for every deletion of Amplify Console application.
 
@@ -50,6 +50,24 @@ In summary, pushing more than 3 commits in short intervals will lead to Web Prev
 
 ==== Solution:
 Similar to the status check not being updated issue, pushing a new commit will solve the problem. Make sure there are no builds in reserve in the build history just in case.
+
+=== Web Preview is not enabled when target branch of pull request was changed
+
+GitHub automarically changes target branch of pull request when original taget branch was merged to another branch.
+//blankline
+However, Web Preview was not enabled when target brnach was changed. You can reproduce it by below.
+
+ 1. Enable Web Preview for specific branch (ex. master)
+ 2. Create branch_a from master
+ 3. Create pull request (PR #1) which into master from branch_a
+ 4. Creaate branch_b from branch_a
+ 5. Create pull request (PR #2) which into branch_a from branch_b
+ 6. Merge PR #1 and delete branch_a
+ 7. GitHub changes target branch of PR #2 to master. However, Amplicy Console does not enable Web Preview for PR #2
+
+=== Solution
+
+Close PR and re-create it again.
 
 === Build status not showing up on management console
 

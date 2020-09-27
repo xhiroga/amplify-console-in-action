@@ -46,7 +46,7 @@ Amplify Consoleのアプリケーションを削除するときは、忘れず�
 
 === GitHubでWeb Previewが実行されない場合
 
-連続でコミットをPushした場合、中間のコミットに対するビルドが省略されます。（
+連続でコミットをPushした場合、中間のコミットに対するビルドが省略されます。
 //blankline
 Amplify Consoleでは、GitHubのPull Requestに対するWeb Previewの実行中に、新しいWeb Previewが発生するとビルドが保留されます。
 保留中のビルドがある場合に更に新しいWeb Previewが発生すると、保留中のビルドが対象とするコミットが書き換わります。その際、GitHub側でコミットに対するチェックが発生していないことになります。
