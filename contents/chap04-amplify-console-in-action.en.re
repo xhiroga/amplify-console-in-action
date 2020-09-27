@@ -8,8 +8,7 @@ This chapter focuses on the expertise gained from utilizing Amplify Console for 
 
 === Using custom Docker Image without management console
 
-While not detailed in the documentation, it is possible to change the image used for the build without management console by setting the 
- @<code>{_CUSTOM_IMAGE} environment variable to your custom Docker image, such as @<code>{justincasetech/node:12.14.1-aws-cli-stretch} 
+While not detailed in the documentation, it is possible to change the image used for the build without management console by setting the @<code>{_CUSTOM_IMAGE} environment variable to your custom Docker image, such as @<code>{justincasetech/node:12.14.1-aws-cli-stretch} 
 
 === Changing the Service Role
 
