@@ -44,7 +44,7 @@ Most requirements for general CI services are met. It also has the merit of leav
 === Woes of the Build Notification
 
 You can set mail notifications from the management console. By hooking Amplify Console’s build events with EventBridge, any services other than Lambda can be executed as well. 
-Further explanation can be found in @<secref>{chap04-amplify-console-in-action.en}
+Further explanation can be found in @<secref>{chap04-amplify-console-in-action.en|Notifications Other than Emails}
 
 == Hosting
 
@@ -68,5 +68,3 @@ Amplify Console scores advantage in providing the immediate cache invalidation w
 On the other hand, Lambda@Edge, which was possible on CloudFront, is no longer supported. Therefore, one cannot implement IP address-based access restrictions and server-side rendering.@<fn>{c52cda50-2930-4c8c-a0c4-78b9632e9fbf}
 
 //footnote[c52cda50-2930-4c8c-a0c4-78b9632e9fbf][Placing CloudFront and Lambda@Edge in front of Amplify Console is still an viable option.]
-
-

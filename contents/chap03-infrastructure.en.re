@@ -48,5 +48,5 @@ However, you must explicitly pass the Git provider’s token while making Amplif
 == Terraform
 
 Still in development as of September 2020. @<fn>{e65ebf21-f2ae-4432-82a0-57ea74b669d6}
-You might want to Upvote Terraform’s Issue page if you need it sooner.
+You might want to upvote Terraform’s Issue page if you need it sooner.
 //footnote[e65ebf21-f2ae-4432-82a0-57ea74b669d6][AWS Amplify Console Resources #6917(https://github.com/terraform-providers/terraform-provider-aws/issues/6917)]
