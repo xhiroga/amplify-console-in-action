@@ -62,7 +62,7 @@ Please be careful about the differentiation between Amplify CLI and Amplify Cons
 One sore point while writing this book is the name “static web hosting”. In fact, different vendor has completely different names! Let us take a look at how vendors call their own services. (Marketing Buzzwords Alert!)
 
  * Static Web Hosting (AWS)@<fn>{deeae56f-3189-4dbd-9f4b-6b9ac940520c}
- * “Web content hosting” (Firebase Hosting) @<fn>{d95826c8-df94-444b-b0e8-a6c13af47edd}
+ * “Web content hosting” (Firebase) @<fn>{d95826c8-df94-444b-b0e8-a6c13af47edd}
  * “A service that automatically builds and deploys full stack web apps to Azure from a GitHub repository(Azure) @<fn>{7ac745d4-683b-400d-a494-8813151f5ce9}
  * “An all-in-one platform for automating modern web projects.” (Netlify) @<fn>{1b61c027-e1ce-497d-b64b-fd1b44d48291}
  * “A cloud platform for static sites and Serverless Functions that fits perfectly with your workflow.” (Vercel) @<fn>{c9ac8488-7450-4a43-b2a2-575ef81d240f}
