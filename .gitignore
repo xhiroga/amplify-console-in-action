@@ -7,7 +7,9 @@ tmp/*
 amplify-console-in-action-pdf/*
 amplify-console-in-action-trial-pdf/*
 amplify-console-in-action-en-pdf/*
+amplify-console-in-action.pdf
+amplify-console-in-action-trial.pdf
+amplify-console-in-action-en.pdf
 config.yml
-*.pdf
 !cover.pdf
 .local
