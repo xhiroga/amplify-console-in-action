@@ -1,6 +1,8 @@
 # AWS Amplify Console 実践入門
 
-https://hiroga-techbookfest.s3-ap-northeast-1.amazonaws.com/812bd999-9d8f-4ffd-b463-19053fef9c60.pdf
+- [prod](https://hiroga-techbookfest.s3-ap-northeast-1.amazonaws.com/812bd999-9d8f-4ffd-b463-19053fef9c60.pdf)
+- [trial](https://hiroga-techbookfest.s3-ap-northeast-1.amazonaws.com/2d5cec97-3deb-402e-b60c-1be422bb2550.pdf)
+- [en](https://hiroga-techbookfest.s3-ap-northeast-1.amazonaws.com/f0cc31d8-dd22-48e0-a689-13ec6bc8b443.pdf)
 
 ## 商品紹介文
 
