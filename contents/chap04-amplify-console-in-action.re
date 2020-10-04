@@ -114,7 +114,7 @@ Amplify Consoleでは、カスタムドメインに紐づくブランチを任�
 == プライベートなGit Submodule
 
 チームによっては、Webアプリケーションで利用しているモジュールをGit Submoduleで管理していると思います。
-しかし、2020年9がつ日現在、残念なことにAmplify ConsoleはプライベートなGit Submoduleに対応していません。
+しかし、2020年9月現在、残念なことにAmplify ConsoleはプライベートなGit Submoduleに対応していません。
 //blankline
 したがってGit Subtreeやnpmモジュールを利用したほうが楽なのですが、どうしてもGit Submoduleを利用したい場合にはDeploy KeyをSecret Managerで管理するのがおすすめです。
 なお、Amplify Consoleがデフォルトで用意するIAMロールはSecret Managerへのアクセス権限がないので、自前で用意したサービスロールを設定するようにしてください。

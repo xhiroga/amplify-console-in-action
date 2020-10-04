@@ -15,7 +15,7 @@ While not detailed in the documentation, it is possible to change the image used
 There are cases where you want to access other AWS resources during Amplify Console’s CI/CD workflow. For example, when you need access to the API key from Parameter Store or Secret Manager, you can create IAM Role for Amplify Console and enable access.
 //blankline
 
-You also can craete IAM Service Role from IAM, not only Amplify Console. If do so, you should specify @<code>{amplify.amazonaws.com} as trusted entities.
+You can create IAM Service Role from Amplify Console as well as the IAM screen. Should you choose to create a service role from IAM, you need to specify "amplify.amazonaws.com" as a trusted entity.
 
 === Notifications Other than Emails
 
@@ -23,7 +23,7 @@ First of all, mail notifications set from the management console is a combinatio
 //blankline
 @<b>{Amplify Console → EventBridge → SNS}
 //blankline
-EventBridge sends notifications on events occurred in AWS services, which are useful in cases such as starting up Lambda based on the task status of ECS. Therefore, by hooking EventBridge to Amplify Console’s build events and start Lambda from there, you can send any notifications like Slack.
+EventBridge sends notifications on events occurred in AWS services, which are useful in cases such as starting up Lambda based on the task status of ECS. Therefore, by hooking EventBridge to Amplify Console’s build events and start Lambda from there, you can send any notification to platforms such as Slack.
 //blankline
 As the mechanism that hooks EventBridge to Amplify Console, it sends notifications to a unique EventBridge Rule named after the combination of Amplify Console applications’ ID and the target branch. For example, if the application ID is 
 @<code>{abcde12345678}, and the target branch is the @<code>{master}branch, then EventBridge will automatically send notifications to a Rule named@<code>{amplify-abcde12345678-master-branch-notification}
