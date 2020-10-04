@@ -2,7 +2,7 @@ version: 2
 anchors:
   - &build-anchor
     docker:
-      - image: kauplan/review2.5
+      - image: hiroga/review2.5-ssh
     working_directory: ~/work
     steps:
       - checkout
@@ -35,33 +35,33 @@ jobs:
     <<: *build-anchor
     environment:
       ENV_NAME: prod
+      LANG_NAME: jp
       BOOK_NAME: "amplify-console-in-action"
   deploy-prod:
     <<: *deploy-anchor
     environment:
-      ENV_NAME: prod
       BOOK_NAME: "amplify-console-in-action"
       SHARED_UUID: "812bd999-9d8f-4ffd-b463-19053fef9c60"
   build-trial:
     <<: *build-anchor
     environment:
       ENV_NAME: trial
+      LANG_NAME: jp
       BOOK_NAME: "amplify-console-in-action-trial"
   deploy-trial:
     <<: *deploy-anchor
     environment:
-      ENV_NAME: trial
       BOOK_NAME: "amplify-console-in-action-trial"
       SHARED_UUID: "2d5cec97-3deb-402e-b60c-1be422bb2550"
   build-en:
     <<: *build-anchor
     environment:
       ENV_NAME: en
+      LANG_NAME: en
       BOOK_NAME: "amplify-console-in-action-en"
   deploy-en:
     <<: *deploy-anchor
     environment:
-      ENV_NAME: en
       BOOK_NAME: "amplify-console-in-action-en"
       SHARED_UUID: "f0cc31d8-dd22-48e0-a689-13ec6bc8b443"
 

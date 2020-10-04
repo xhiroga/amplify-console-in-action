@@ -1,0 +1,9 @@
+#!/bin/sh
+set -exo
+
+ENV_NAME=${ENV_NAME:=prod}
+LANG_NAME=${LANG_NAME:=jp}
+
+ln -f config.$ENV_NAME.yml config.yml
+ln -f sty/mytitlepage.$LANG_NAME.sty sty/mytitlepage.sty
+ln -f sty/starter.$LANG_NAME.sty sty/starter.sty

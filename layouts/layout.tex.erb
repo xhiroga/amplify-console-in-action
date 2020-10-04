@@ -364,9 +364,9 @@ end
   <%= p %>\includepdf[<%= @config["coverpdf_option"] %>]{./<%= @config["imagedir"] %>/<%= pdf_file %>}
   <%= p %>\makeatletter\advance\c@page by -1\relax\makeatother
 <%-     end -%>
-  \ifdefined\mytitlepage %%%%%%%%%%
-    \mytitlepage   % defined in 'sty/mytitlepage.sty'
-  \else                  %%%%%%%%%%
+\ifdefined\mytitlepage %%%%%%%%%%
+  \mytitlepage   % defined in 'sty/mytitlepage.sty'
+\else                  %%%%%%%%%%
 \thispagestyle{empty}
 \begin{center}%
   \mbox{} \vskip5zw
