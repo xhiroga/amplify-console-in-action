@@ -13,3 +13,5 @@ amplify-console-in-action-en.pdf
 config.yml
 !cover.pdf
 .local
+sty/mytitlepage.sty
+sty/starter.sty
