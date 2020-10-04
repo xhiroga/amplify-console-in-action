@@ -2,7 +2,7 @@ version: 2
 anchors:
   - &build-anchor
     docker:
-      - image: kauplan/review2.5
+      - image: hiroga/review2.5-ssh
     working_directory: ~/work
     steps:
       - checkout
