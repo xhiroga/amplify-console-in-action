@@ -9,7 +9,7 @@ anchors:
       - run:
           name: create pdf
           command: |
-            ln -f "config.${ENV_NAME}.yml" config.yml
+            ./link-version
             export STARTER_TARGET=ebook; 
             rake pdf
             mv ${BOOK_NAME}.pdf artifact.pdf
