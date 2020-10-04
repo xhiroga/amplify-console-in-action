@@ -4,6 +4,10 @@ set -exo
 ENV_NAME=${ENV_NAME:=prod}
 LANG_NAME=${LANG_NAME:=jp}
 
-ln -f config.$ENV_NAME.yml config.yml
-ln -f sty/mytitlepage.$LANG_NAME.sty sty/mytitlepage.sty
-ln -f sty/starter.$LANG_NAME.sty sty/starter.sty
+# ln -f cause error if link was already created.
+rm -f config.yml
+ln config.$ENV_NAME.yml config.yml
+rm -f sty/mytitlepage.sty
+ln sty/mytitlepage.$LANG_NAME.sty sty/mytitlepage.sty
+rm -f sty/starter.sty
+ln sty/starter.$LANG_NAME.sty sty/starter.sty
