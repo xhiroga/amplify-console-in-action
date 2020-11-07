@@ -46,4 +46,4 @@ Amplify Consoleの登場によって、それらの構築は不要になりま�
 そうした点については、今後の版で随時更新させていただきたいのでお知らせいただけると幸いです。ご意見だけでなく質問も大歓迎です。連絡先を以下に記します。
 
  * Mail: @<href>{mailto://hiroga1030@gmail.com, hiroga1030@gmail.com}
- * Twitter: @<href>{https://twitter.com/hiroga_cc, @hiroga_cc}
+ * Twitter: @<href>{https://twitter.com/xhiroga, @xhiroga}

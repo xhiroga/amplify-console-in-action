@@ -38,4 +38,4 @@ Chapter 1 is about static web hosting and Amplify Console, while Chapter 2 will 
 Though this book is based on AWS documentations and confirmed information provided by the support team, there may still be inaccuracies and errors. Furthermore, there may be better implementations compared to the ones depicted in this book. As this book will be updated in the future, we will gladly accept any notification of question on these matters. Please do not hesitate to contact:
 
  * Mail: @<href>{mailto://hiroga1030@gmail.com, hiroga1030@gmail.com}
- * Twitter: @<href>{https://twitter.com/hiroga_cc, @hiroga_cc}
+ * Twitter: @<href>{https://twitter.com/xhiroga, @xhiroga}

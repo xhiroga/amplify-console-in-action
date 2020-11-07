@@ -20,4 +20,4 @@ While it has definitely become the first choice in building front-end at AWS, I 
 Please tweet your opinion and let me know what you think! Tell me about your experiences with Amplify Console and I will be thrilled to find out!
 
  * Mail: @<href>{mailto://hiroga1030@gmail.com, hiroga1030@gmail.com}
- * Twitter: @<href>{https://twitter.com/hiroga_cc, @hiroga_cc}
+ * Twitter: @<href>{https://twitter.com/xhiroga, @xhiroga}
