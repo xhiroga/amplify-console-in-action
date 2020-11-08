@@ -16,7 +16,8 @@ Amplify Console を導入された方・検討している方に向けて、@xhi
 ### 体験版
 
 もし体験版をご覧になって、正式版もご覧になりたい、と思っていただければとても嬉しいです！以下が製品版のリンクです。
-https://manage.booth.pm/items/1560273
+
+[Amplify Console 実践入門](https://hiroga.booth.pm/items/2376840)
 
 ## 対象となる読者
 
