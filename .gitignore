@@ -7,9 +7,11 @@ tmp/*
 amplify-console-in-action-pdf/*
 amplify-console-in-action-trial-pdf/*
 amplify-console-in-action-en-pdf/*
+amplify-console-in-action-en-epub/*
 amplify-console-in-action.pdf
 amplify-console-in-action-trial.pdf
 amplify-console-in-action-en.pdf
+amplify-console-in-action-en.epub
 config.yml
 !cover.pdf
 .local
