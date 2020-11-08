@@ -29,6 +29,13 @@ Amplify Consoleでは、AWS側でアプリケーションを削除してもGitHu
 地道に消すしかありません。Amplify ConsoleのアプリケーションIDを控えた上で、GitHubリポジトリのWebhookを一つづつ開き、Payload URLのクエリパラメータを確認して利用中でなければ消します。
 Amplify Consoleのアプリケーションを削除するときは、忘れずにWebhookも消すようにしたいですね！
 
+=== GitHubリポジトリのWebhookを誤って削除してしまった
+GitHubに登録されたWebhookを掃除していると、誤って利用中のWebhookを削除してしまうことがあります。
+
+==== 対策
+「アクション」から「アプリの設定を表示」を押下し、「アプリの設定: 全般」の「Reconnect Repository」ボタンからリポジトリを再接続するとGithubのWebhookが再作成されます。
+なお、「ビルドの設定」から作成できる Incoming Webhook は、GitHubに登録するためのWebhookとは形式が違うため利用できません。
+
 == ビルドに関するトラブル
 
 === GitHubでWeb Previewのステータスが更新されない場合
