@@ -34,3 +34,4 @@ Amplify Console を導入された方・検討している方に向けて、@xhi
 
 - [技術書典](https://techbookfest.org/mypage)
 - [BOOTH](https://manage.booth.pm/items)
+- [Kindle](https://kdp.amazon.com/en_US/bookshelf)
