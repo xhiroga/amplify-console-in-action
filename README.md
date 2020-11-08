@@ -31,3 +31,6 @@ Amplify Console を導入された方・検討している方に向けて、@xhi
 ・現場で Amplify Console を利用されている方
 
 ## 更新用リンク
+
+- [技術書典](https://techbookfest.org/mypage)
+- [BOOTH](https://manage.booth.pm/items)
