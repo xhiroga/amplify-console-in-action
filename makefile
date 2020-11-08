@@ -4,7 +4,7 @@ PDF_EN = amplify-console-in-action-en.pdf
 EPUB_EN = amplify-console-in-action-en.epub
 
 .PHONY: all clean;
-all: 
+all: prod trial en epub-en;
 prod: $(PDF);
 trial: $(PDF_TRIAL);
 en: $(PDF_EN);
