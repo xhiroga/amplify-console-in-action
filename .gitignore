@@ -4,6 +4,7 @@
 *.yml.orig
 *.erb.orig
 tmp/*
+node_modules/*
 amplify-console-in-action-pdf/*
 amplify-console-in-action-trial-pdf/*
 amplify-console-in-action-en-pdf/*
