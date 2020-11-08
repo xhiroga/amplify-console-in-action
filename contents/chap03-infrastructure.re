@@ -50,6 +50,9 @@ https://console.aws.amazon.com/amplify/home#/*************/**********/dev
 ただし、マネジメントコンソール以外からAmplify Consoleアプリケーションを作る場合は、Gitプロバイダーのトークンを明示的に渡す必要があります。
 筆者のチームでは、Secret ManagerにGitHubのPersonal Access Tokenを保存し、それをAWS CDKから参照することで解決しています。
 
+なお、 @<code>{AWS::Amplify::Domain} の @<code>{DependsOn} 属性に対応するブランチの @<code>{AWS::Amplify::Branch} を設定することをおすすめします。
+@<code>{AWS::Amplify::Domain} が先に作成されようとした場合、 @<code>{SubDomainSetting} に指定されているドメインが未接続のため CloudFormation/CDK のデプロイが失敗します。
+
 == Terraform
 
 2020年9月時点で開発中です。@<fn>{e65ebf21-f2ae-4432-82a0-57ea74b669d6}
