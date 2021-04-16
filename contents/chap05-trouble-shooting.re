@@ -30,11 +30,22 @@ Amplify Consoleでは、AWS側でアプリケーションを削除してもGitHu
 Amplify Consoleのアプリケーションを削除するときは、忘れずにWebhookも消すようにしたいですね！
 
 === GitHubリポジトリのWebhookを誤って削除してしまった
-GitHubに登録されたWebhookを掃除していると、誤って利用中のWebhookを削除してしまうことがあります。
+GitHubリポジトリに登録されたWebhookを掃除していると、誤って利用中のWebhookを削除してしまうことがあります。
 
 ==== 対策
 「アクション」から「アプリの設定を表示」を押下し、「アプリの設定: 全般」の「Reconnect Repository」ボタンからリポジトリを再接続するとGithubのWebhookが再作成されます。
 なお、「ビルドの設定」から作成できる Incoming Webhook は、GitHubに登録するためのWebhookとは形式が違うため利用できません。
+
+
+=== GitHubリポジトリのDeploy Keyを誤って削除してしまった
+リポジトリに登録されたDeploy Keyがいつの間にか削除されてしまったケースの対応です。
+
+==== 対策
+まず、該当Amplify ConsoleアプリケーションのWebhookを削除します。
+次に「アクション」から「アプリの設定を表示」を押下し、「アプリの設定: 全般」の「Reconnect Repository」ボタンからリポジトリを再接続するとGithubのWebhookが再作成されます。
+なお、「ビルドの設定」から作成できる Incoming Webhook は、GitHubに登録するためのWebhookとは形式が違うため利用できません。
+
+Webhookを誤って削除したケースと基本的に同じですが、Webhookが登録されたままだとDeploy Keyの再登録が行われないので注意してください。
 
 == ビルドに関するトラブル
 
