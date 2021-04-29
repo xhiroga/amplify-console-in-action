@@ -27,8 +27,8 @@ anchors:
     steps:
       - attach_workspace:
           at: ~/work
-      - run: aws s3 cp artifact.pdf s3://hiroga-techbookfest/${BOOK_NAME}.pdf --acl public-read
-      - run: aws s3 cp artifact.pdf s3://hiroga-techbookfest/${SHARED_UUID}.pdf --acl public-read
+      - run: aws s3 cp artifact.pdf s3://hiroga-book/amplify-console-in-action/${BOOK_NAME}.pdf --acl public-read
+      - run: aws s3 cp artifact.pdf s3://hiroga-book/amplify-console-in-action/${SHARED_UUID}.pdf --acl public-read
 
 jobs:
   build-prod:
