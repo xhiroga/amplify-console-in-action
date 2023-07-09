@@ -30,6 +30,13 @@ Amplify Console を導入された方・検討している方に向けて、@xhi
 以下に当てはまる方には、Amplify Console の役割を見直す効果があるかもしれません。
 ・現場で Amplify Console を利用されている方
 
+## ビルド
+
+```shell
+act -j build-prod --artifact-server-path /tmp/artifacts
+act -j deploy-prod -s AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID} -s AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY} -s AWS_SESSION_TOKEN=${AWS_SESSION_TOKEN} --artifact-server-path /tmp/artifacts
+```
+
 ## 更新用リンク
 
 - [技術書典](https://techbookfest.org/mypage)

@@ -1,0 +1,55 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - 'deploy/*'
+
+env:
+  ENV_NAME: prod
+  LANG_NAME: jp
+  BOOK_NAME: "amplify-console-in-action"
+  SHARED_UUID: "812bd999-9d8f-4ffd-b463-19053fef9c60"
+
+jobs:
+  build-prod:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/xhiroga/review2.5-ssh
+    steps:
+      - uses: actions/checkout@v2
+      - name: create pdf
+        run: |
+          ./link-version
+          export STARTER_TARGET=ebook; 
+          rake pdf
+          mv ${BOOK_NAME}.pdf artifact.pdf
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: artifact-pdf
+          path: ./artifact.pdf
+
+  deploy-prod:
+    needs: build-prod
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/xhiroga/aws-cli-node
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Download artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: artifact-pdf
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }}
+          aws-region: ap-northeast-1
+      - run: aws s3 cp artifact.pdf s3://hiroga-books/amplify-console-in-action/${BOOK_NAME}.pdf --acl public-read
+      - run: aws s3 cp artifact.pdf s3://hiroga-books/amplify-console-in-action/${SHARED_UUID}.pdf --acl public-read
