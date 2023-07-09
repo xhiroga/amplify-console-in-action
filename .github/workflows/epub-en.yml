@@ -1,0 +1,20 @@
+name: Deploy Epub En
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy-epub-en:
+    uses: ./.github/workflows/deploy.yml
+    with:
+      env_name: epub-en
+      lang_name: en
+      book_name: amplify-console-in-action-en
+      shared_uuid: f1450dd3-cfb4-42e4-a7cd-e198fd8fd361
+      ext: epub
+    secrets:
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      AWS_SESSION_TOKEN: ${{ secrets.AWS_SESSION_TOKEN }}
