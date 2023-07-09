@@ -1,4 +1,4 @@
-name: Deploy Prod
+name: Deploy Trial
 
 on:
   push:
@@ -6,13 +6,13 @@ on:
       - main
 
 jobs:
-  deploy-prod:
+  deploy-trial:
     uses: ./.github/workflows/deploy.yml
     with:
-      env_name: prod
+      env_name: trial
       lang_name: jp
-      book_name: amplify-console-in-action
-      shared_uuid: 812bd999-9d8f-4ffd-b463-19053fef9c60
+      book_name: amplify-console-in-action-trial
+      shared_uuid: 2d5cec97-3deb-402e-b60c-1be422bb2550
     secrets:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}

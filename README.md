@@ -33,6 +33,7 @@ Amplify Console を導入された方・検討している方に向けて、@xhi
 ## ビルド
 
 ```shell
+# TODO: use vars instead of secrets.
 act -j deploy-prod -s AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID} -s AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY} -s AWS_SESSION_TOKEN=${AWS_SESSION_TOKEN} --artifact-server-path /tmp/artifacts
 ```
 

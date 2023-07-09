@@ -1,4 +1,4 @@
-name: Deploy Prod
+name: Deploy En
 
 on:
   push:
@@ -6,13 +6,13 @@ on:
       - main
 
 jobs:
-  deploy-prod:
+  deploy-en:
     uses: ./.github/workflows/deploy.yml
     with:
-      env_name: prod
-      lang_name: jp
-      book_name: amplify-console-in-action
-      shared_uuid: 812bd999-9d8f-4ffd-b463-19053fef9c60
+      env_name: en
+      lang_name: en
+      book_name: amplify-console-in-action-en
+      shared_uuid: f0cc31d8-dd22-48e0-a689-13ec6bc8b443
     secrets:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
