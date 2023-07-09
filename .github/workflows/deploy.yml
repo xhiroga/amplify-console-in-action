@@ -1,20 +1,37 @@
-name: Build and Deploy
+name: Deploy
 
 on:
-  push:
-    branches:
-      - main
-    tags:
-      - 'deploy/*'
+  workflow_call:
+    inputs:
+      env_name:
+        type: string
+        description: 'env name'
+        required: true
+        default: 'prod'
+      lang_name:
+        type: string
+        description: 'lang name'
+        required: true
+        default: 'ja'
+      book_name:
+        type: string
+        description: 'book name'
+        required: true
+        default: 'amplify-console-in-action'
+      shared_uuid:
+        type: string
+        description: 'shared uuid'
+        required: true
+        default: '812bd999-9d8f-4ffd-b463-19053fef9c60'
 
 env:
-  ENV_NAME: prod
-  LANG_NAME: jp
-  BOOK_NAME: "amplify-console-in-action"
-  SHARED_UUID: "812bd999-9d8f-4ffd-b463-19053fef9c60"
+  ENV_NAME: ${{ inputs.env_name }}
+  LANG_NAME: ${{ inputs.lang_name }}
+  BOOK_NAME: ${{ inputs.book_name }}
+  SHARED_UUID: ${{ inputs.shared_uuid }}
 
 jobs:
-  build-prod:
+  build:
     runs-on: ubuntu-latest
     container:
       image: ghcr.io/xhiroga/review2.5-ssh
@@ -23,7 +40,7 @@ jobs:
       - name: create pdf
         run: |
           ./link-version
-          export STARTER_TARGET=ebook; 
+          export STARTER_TARGET=ebook;
           rake pdf
           mv ${BOOK_NAME}.pdf artifact.pdf
       - name: Upload artifact
@@ -32,8 +49,8 @@ jobs:
           name: artifact-pdf
           path: ./artifact.pdf
 
-  deploy-prod:
-    needs: build-prod
+  upload:
+    needs: build
     runs-on: ubuntu-latest
     container:
       image: ghcr.io/xhiroga/aws-cli-node

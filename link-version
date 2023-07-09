@@ -1,8 +1,5 @@
 #!/bin/sh
-set -exo
-
-ENV_NAME=${ENV_NAME:=prod}
-LANG_NAME=${LANG_NAME:=jp}
+set -euxo
 
 # ln -f cause error if link was already created.
 rm -f config.yml

@@ -1,0 +1,17 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - 'deploy/*'
+
+jobs:
+  deploy-prod:
+    uses: ./.github/workflows/deploy.yml
+    with:
+      env_name: prod
+      lang_name: jp
+      book_name: amplify-console-in-action
+      shared_uuid: 812bd999-9d8f-4ffd-b463-19053fef9c60
