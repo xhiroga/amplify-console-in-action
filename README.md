@@ -51,5 +51,5 @@ act -j deploy-prod -s AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID} -s AWS_SECRET_ACCES
 
 - [\[更新終了につき無償公開\] Amplify Console 実践入門 - hiroga - BOOTH](https://hiroga.booth.pm/items/2376840)
 - [\[体験版\] Amplify Console 実践入門 - hiroga - BOOTH](https://hiroga.booth.pm/items/2372813)
-- [Amplify Console 実践入門 - さわら - 技術書点マーケット](https://techbookfest.org/product/4838711567056896)（販売終了）
+- [Amplify Console 実践入門 - さわら - 技術書典マーケット](https://techbookfest.org/product/4838711567056896)（販売終了）
 - [Kindle](https://kdp.amazon.com/en_US/bookshelf)
