@@ -1,6 +1,6 @@
 = Preface
 
-== End of Maintenance Announcement
+== End of Update Announcement
 
 At the time of writing this book, I was using the Amplify Console (now known as Amplify Hosting) for my work and I was delighted to be able to share the knowledge I gained from it. However, over the past three years, I have had more opportunities to use different technologies, making it difficult for me to keep up with the latest insights and changes in Amplify Console.
 

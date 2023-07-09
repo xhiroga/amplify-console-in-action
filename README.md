@@ -1,8 +1,24 @@
 # AWS Amplify Console 実践入門
 
-- [prod](https://hiroga-books.s3-ap-northeast-1.amazonaws.com/amplify-console-in-action/812bd999-9d8f-4ffd-b463-19053fef9c60.pdf)
-- [trial](https://hiroga-books.s3-ap-northeast-1.amazonaws.com/amplify-console-in-action/2d5cec97-3deb-402e-b60c-1be422bb2550.pdf)
-- [en](https://hiroga-books.s3-ap-northeast-1.amazonaws.com/amplify-console-in-action/f0cc31d8-dd22-48e0-a689-13ec6bc8b443.pdf)
+## 更新終了のお知らせ
+
+本書の執筆時、筆者はAmplify Console（現在はAmplify Hosting）を業務で利用し、そこで知り得た知見を共有できることに喜びを感じておりました。
+しかし、ここ3年ほどは別の技術を利用する機会が増え、Amplify Consoleの最新の知見や変更を追うことが困難となってしまいました。
+
+さらに、現在の私の関心は新しい技術に移りつつあり、公私共にそちらに力を注ぎたいと考えております。
+その一方で、本書の誤りや古くなった情報を放置することは、読者の皆様にとって不利益となると考えております。
+
+そこで、一つの決断を下しました。本書を非公開にする代わりに、本文をそのGitHubのリポジトリごと無償公開することにします。
+これにより、誤りや古くなった情報について、読者の皆様で更新いただくことが可能です。
+
+これまで有償で本書をご購入いただいた皆様には、深くお礼を申し上げます。
+有償で購入いただいた書籍が無償公開されることについて、不利益を被ったと感じられる方もいらっしゃると思います。
+購入者の方に公平な埋め合わせを、とも考えたのですが、販売形態や同人誌であることから現実的ではありませんでした。
+代わりに、技術イベントやSNSでやり取りさせていただく際には、改めて深くお礼をさせてくださいませ。
+
+以下、主に本書刊行時点（2020年9月）時点の情報を元に執筆しております。多少なりとも読者の方のお役に立てば幸いです。
+
+どうぞよろしくお願いいたします。
 
 ## 商品紹介用
 
@@ -14,12 +30,6 @@ Amplify Console を導入された方・検討している方に向けて、@xhi
 
 そうした経験から得た、Amplify Console の機能の概観・業務に取り入れるためのテクニック・トラブルシューティングなどにを紹介いたします。
 これから Amplify Console に触る方も、既に Amplify Console を導入されている方も、Amplify Console を実践する上での何らかの発見があれば幸いです。
-
-#### 体験版
-
-もし体験版をご覧になって、正式版もご覧になりたい、と思っていただければとても嬉しいです！以下が製品版のリンクです。
-
-[Amplify Console 実践入門](https://hiroga.booth.pm/items/2376840)
 
 ### 対象となる読者
 
@@ -37,8 +47,9 @@ Amplify Console を導入された方・検討している方に向けて、@xhi
 act -j deploy-prod -s AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID} -s AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY} -s AWS_SESSION_TOKEN=${AWS_SESSION_TOKEN} --artifact-server-path .artifacts
 ```
 
-## 更新用リンク
+## 商品リンク
 
-- [技術書典](https://techbookfest.org/mypage)
-- [BOOTH](https://manage.booth.pm/items)
+- [\[更新終了につき無償公開\] Amplify Console 実践入門 - hiroga - BOOTH](https://hiroga.booth.pm/items/2376840)
+- [\[体験版\] Amplify Console 実践入門 - hiroga - BOOTH](https://hiroga.booth.pm/items/2372813)
+- [Amplify Console 実践入門 - さわら - 技術書点マーケット](https://techbookfest.org/product/4838711567056896)（販売終了）
 - [Kindle](https://kdp.amazon.com/en_US/bookshelf)
