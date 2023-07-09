@@ -1,5 +1,21 @@
 = Preface
 
+== End of Maintenance Announcement
+
+At the time of writing this book, I was using the Amplify Console (now known as Amplify Hosting) for my work and I was delighted to be able to share the knowledge I gained from it. However, over the past three years, I have had more opportunities to use different technologies, making it difficult for me to keep up with the latest insights and changes in Amplify Console.
+
+In addition, my current interest is shifting to new technologies and I would like to focus more on them both professionally and personally. On the other hand, I believe that leaving errors and outdated information in this book would be disadvantageous for you, the readers.
+
+Therefore, I have made a decision. Instead of making this book private, I will make the full text available for free, along with its GitHub repository. This way, it will be possible for you, the readers, to update any errors or outdated information.
+
+I would like to express my deep gratitude to those of you who have purchased this book for a fee. I understand that some of you may feel disadvantaged by the fact that a book you purchased for a fee is now available for free. I considered providing a fair compensation to the purchasers, but I judged it to be extremely difficult due to the nature of the sales format and the fact that it is a self-published book. Instead, I would like to express my deep gratitude to you when we interact at technical events or on social media.
+
+Below, I wrote mainly based on the information at the time of publishing this book (September 2020). I hope it will be of some help to the readers.
+
+Thank you very much for your understanding.
+
+== Foreword
+
 Thank you for your interest for this book.
 As a software engineer with practical experience in Amplify Console, I wrote this book in hopes to share my knowledge and experience to anyone who are planning, or already in the process of applying Amplify Console to websites and web applications.
 //blankline
