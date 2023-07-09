@@ -58,13 +58,3 @@ Basic authentication and immediate cache invalidation are offered by using Cloud
  * Automatic setting of Route53
 
 Note that Route53’s automatic setting requires an AWS Account with the same Hosted Zone between the Amplify Console Application and the target domain. Route 53 for management services from external domains or other AWS accounts requires manual setup.
-
-== Amplify Console vs CloudFront+S3
-
-While Amplify Console delivers the same performance as CloudFront+S3, the difference lies in the features offered.
-//blankline
-Amplify Console scores advantage in providing the immediate cache invalidation with each commit, automatic deployment for each branch, generating Web Previews for each Pull Request, and password protection in a management service bundle.
-//blankline
-On the other hand, Lambda@Edge, which was possible on CloudFront, is no longer supported. Therefore, one cannot implement IP address-based access restrictions and server-side rendering.@<fn>{c52cda50-2930-4c8c-a0c4-78b9632e9fbf}
-
-//footnote[c52cda50-2930-4c8c-a0c4-78b9632e9fbf][Placing CloudFront and Lambda@Edge in front of Amplify Console is still an viable option.]

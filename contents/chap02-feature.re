@@ -68,14 +68,3 @@ CloudFrontとS3をベースに、Basic認証やキャッシュの即時無効化
 
 なお、Route53の自動設定を行うには、Amplify Console アプリケーションと指定したドメイン名を登録しているHostedZoneが同じAWSアカウントに存在する必要があります。
 外部のドメイン管理サービスや別のAWSアカウントのRoute53で管理している場合は、別途手動で設定が必要です。
-
-== Amplify Console vs CloudFront+S3の機能比較
-
-Amplify Consoleのパフォーマンスは、CloudFront+S3 と同レベルです。しかし、機能の違いがあります。
-//blankline
-Amplify Consoleの優位点は、コミットごとの即時キャッシュ無効化・ブランチごとの自動デプロイ・Pull Request のWeb Preview 作成、パスワード保護などがマネージドサービスとして提供されていることです。
-//blankline
-一方で、CloudFrontでは可能だったLambda@Edgeの利用は現在サポートされていません。
-したがって、IPアドレスによるアクセス制限・サーバーサイドレンダリングなどを実装することができません。@<fn>{c52cda50-2930-4c8c-a0c4-78b9632e9fbf}
-
-//footnote[c52cda50-2930-4c8c-a0c4-78b9632e9fbf][Amplify Consoleの前段にCloudFrontを配置してLambda@Edgeを利用する、という方法はあります。]
