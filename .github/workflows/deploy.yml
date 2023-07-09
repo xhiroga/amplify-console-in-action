@@ -27,6 +27,13 @@ on:
         type: string
         required: false
         default: 'pdf'
+    secrets:
+      AWS_ACCESS_KEY_ID:
+        required: true
+      AWS_SECRET_ACCESS_KEY:
+        required: true
+      AWS_SESSION_TOKEN:
+        required: false
 
 env:
   ENV_NAME: ${{ inputs.env_name }}
@@ -62,7 +69,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: artifact-pdf
-      - name: Configure AWS Credentials
+      - name: Configure AWS Credentials with Session Token
         uses: aws-actions/configure-aws-credentials@v1
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
